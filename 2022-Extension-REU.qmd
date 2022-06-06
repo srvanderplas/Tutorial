@@ -192,7 +192,7 @@ If a variable is important, then it should account for more variability in the d
 ANOVA models are sometimes shown in tables like this:
 
 ```{r, include = F}
-library(tidyverse)
+library(dplyr)
 
 data <- tibble(group = rep(1:3, each = 6), 
        groupavg = rep(c(41, 43, 47), each = 6),

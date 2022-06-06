@@ -11,7 +11,17 @@ website:
         text: Home
       - href: extension.qmd
         text: Extension
-
+      - sidebar:extension
+        
+  sidebar:
+    - id: extension
+      title: "Extension"
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents: 
+        - 2022-Extension-REU.qmd
+        - 2022-Extension-REU-slides.qmd
 format:
   html:
     theme: cosmo

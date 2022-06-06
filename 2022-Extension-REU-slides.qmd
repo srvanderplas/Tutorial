@@ -104,8 +104,8 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
 
 -   What effect does the number of test cups have on the results?
 
-    -   Assuming the number of observed cups is the same as the number of test cups
-    -   Assuming the number of observed cups is less than the number of test cups
+    -   [Assuming the number of observed cups is the same as the number of test cups]{style="font-size:smaller;"}
+    -   [Assuming the number of observed cups is less than the number of test cups]{style="font-size:smaller;"}
 
 ::: aside
 Another link to the same applet is [[https://srvanderplas.shinyapps.io/UNL-APL-workshop/]{.emph}](https://srvanderplas.shinyapps.io/UNL-APL-workshop/)
@@ -320,7 +320,8 @@ If height is important, students in a [single grade]{.emph .red} should be [more
 Results from ANOVA are shown in tables like this:
 
 ```{r, include = F}
-library(tidyverse)
+library(dplyr)
+library(tibble)
 
 data <- tibble(group = rep(1:3, each = 6), 
        groupavg = rep(c(41, 43, 47), each = 6),

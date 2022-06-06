@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "2022 Extension REU Statistics Primer and slides"
+  },
+  {
+    "objectID": "2022-Extension-REU.html",
+    "href": "2022-Extension-REU.html",
+    "title": "Statistics Primer",
+    "section": "",
+    "text": "Footnotes\n\n\nA more thorough explanation of this experiment is available here - the tea tasting experiment is one of the pillars of early statistics and randomization-based hypothesis testing.↩︎"
+  },
+  {
     "objectID": "2022-Extension-REU-slides.html#what-is-statistics",
     "href": "2022-Extension-REU-slides.html#what-is-statistics",
     "title": "A Short Overview of Statistics",
@@ -12,6 +26,27 @@
     "title": "A Short Overview of Statistics",
     "section": "Statistical Tasks",
     "text": "Statistical Tasks\nDescription: What does the data say?"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#statistical-tasks-1",
+    "href": "2022-Extension-REU-slides.html#statistical-tasks-1",
+    "title": "A Short Overview of Statistics",
+    "section": "Statistical Tasks",
+    "text": "Statistical Tasks\nExperimental Design: What’s the best way to collect data?"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#statistical-tasks-2",
+    "href": "2022-Extension-REU-slides.html#statistical-tasks-2",
+    "title": "A Short Overview of Statistics",
+    "section": "Statistical Tasks",
+    "text": "Statistical Tasks\nInference: What does the data tell us (about the population)?"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#statistical-tasks-3",
+    "href": "2022-Extension-REU-slides.html#statistical-tasks-3",
+    "title": "A Short Overview of Statistics",
+    "section": "Statistical Tasks",
+    "text": "Statistical Tasks\nPrediction: What will happen next?"
   },
   {
     "objectID": "2022-Extension-REU-slides.html#an-historical-example",
@@ -63,25 +98,32 @@
     "text": "Try it out\nGo to https://shiny.srvanderplas.com/APL and start with the Distributions tab.\n\nWhat changes when you change distribution?\nHow many samples do you need for the simulation histogram to look similar to the theoretical distribution?\nWhat effect does setting your observed value to be larger have on the p-value?\nNote: At this point, we are doing tests examining values greater than the observed value. This will obviously not always hold true.\nHow different is the simulation p-value from the theoretical p-value? Does this change when you increase the number of samples?"
   },
   {
-    "objectID": "2022-Extension-REU-slides.html#underlying-logic---testing",
-    "href": "2022-Extension-REU-slides.html#underlying-logic---testing",
+    "objectID": "2022-Extension-REU-slides.html#statistical-test-logic",
+    "href": "2022-Extension-REU-slides.html#statistical-test-logic",
     "title": "A Short Overview of Statistics",
-    "section": "Underlying Logic - Testing",
-    "text": "Underlying Logic - Testing\n\nGoal: Are the experiment results are compatible with the null hypothesis?\nif the region that is “more extreme” than the observed value is very small, then the experimental results are surprising\n\nThis suggests the null hypothesis might not be reliable\nReject \\(H_0\\) in favor of the alternative"
+    "section": "Statistical Test Logic",
+    "text": "Statistical Test Logic\n\nGoal: Are the experiment results are compatible with the null hypothesis?\nif the region that is “more extreme” than the observed value is very small, then the experimental results are surprising\n\nThis suggests the null hypothesis might not be reliable\nReject \\(H_0\\) in favor of the alternative"
   },
   {
-    "objectID": "2022-Extension-REU-slides.html#underlying-logic---p-values",
-    "href": "2022-Extension-REU-slides.html#underlying-logic---p-values",
+    "objectID": "2022-Extension-REU-slides.html#statistical-test-logic-1",
+    "href": "2022-Extension-REU-slides.html#statistical-test-logic-1",
     "title": "A Short Overview of Statistics",
-    "section": "Underlying Logic - P-values",
-    "text": "Underlying Logic - P-values"
+    "section": "Statistical Test Logic",
+    "text": "Statistical Test Logic"
   },
   {
-    "objectID": "2022-Extension-REU-slides.html#underlying-logic---two-sided-tests",
-    "href": "2022-Extension-REU-slides.html#underlying-logic---two-sided-tests",
+    "objectID": "2022-Extension-REU-slides.html#statistical-test-logic-2",
+    "href": "2022-Extension-REU-slides.html#statistical-test-logic-2",
     "title": "A Short Overview of Statistics",
-    "section": "Underlying Logic - Two Sided Tests",
-    "text": "Underlying Logic - Two Sided Tests\n\nIf we don’t know/care whether \\(x < a\\) or \\(x > a\\), we use a two-sided test\n\n\nYou can experiment with two-sided tests here:\nhttps://shiny.srvanderplas.com/APL/ and click on “One Continuous Variable”"
+    "section": "Statistical Test Logic",
+    "text": "Statistical Test Logic\n\nthe region that is “more extreme” than the observed value is summarized as the p-value – the area of that region.\n\np-values lower than \\(\\alpha = 0.05\\), a pre-specified cutoff are considered “statistically significant”\nthat is, they should lead to a rejection of the null hypothesis"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#two-sided-tests",
+    "href": "2022-Extension-REU-slides.html#two-sided-tests",
+    "title": "A Short Overview of Statistics",
+    "section": "Two Sided Tests",
+    "text": "Two Sided Tests\n\nIf we don’t know/care whether \\(x < a\\) or \\(x > a\\), we use a two-sided test\n\n\nYou can experiment with two-sided tests here:\nhttps://shiny.srvanderplas.com/APL/ and click on “One Continuous Variable”"
   },
   {
     "objectID": "2022-Extension-REU-slides.html#confidence-intervals",
@@ -110,139 +152,6 @@
     "title": "A Short Overview of Statistics",
     "section": "One Continuous Variable",
     "text": "One Continuous Variable\n\nStatistic: \\(\\displaystyle t = \\frac{\\overline x - \\mu}{s/\\sqrt{n}}\\) where\n\n\\(\\overline x\\) is the sample mean,\n\\(s\\) is the sample standard deviation,\n\\(\\mu\\) is the hypothesized mean, and\n\\(n\\) is the sample size\n\nSimulation method: none\nTheoretical distribution: \\(t\\) with \\(n-1\\) degrees of freedom\n\nhttps://shiny.srvanderplas.com/APL/ and click on “One Continuous Variable”"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#categorical-continuous-variables",
-    "href": "2022-Extension-REU-slides.html#categorical-continuous-variables",
-    "title": "A Short Overview of Statistics",
-    "section": "Categorical + Continuous Variables",
-    "text": "Categorical + Continuous Variables\nTwo-group Tests\n\nCategorical variable: Group 1 or Group 2?\nContinuous variable: Some measurement\nStatistic: \\(\\overline x_1 - \\overline x_2\\)\nSimulation method: shuffle group labels (flash cards if by hand)\nTheoretical distribution: \\(t\\) (degrees of freedom are a bit complicated)\n\nhttps://shiny.srvanderplas.com/APL/ and click on “Categorical + Continuous Variables”"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#categorical-continuous-variables-1",
-    "href": "2022-Extension-REU-slides.html#categorical-continuous-variables-1",
-    "title": "A Short Overview of Statistics",
-    "section": "Categorical + Continuous Variables",
-    "text": "Categorical + Continuous Variables\nTwo-group Tests\n\nA two-sample experiment randomly divides up a sample of experimental units into two groups and calculates the sample mean for each group."
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#categorical-continuous-variables-2",
-    "href": "2022-Extension-REU-slides.html#categorical-continuous-variables-2",
-    "title": "A Short Overview of Statistics",
-    "section": "Categorical + Continuous Variables",
-    "text": "Categorical + Continuous Variables\nTwo-group Tests\n\nA two-sample experiment randomly divides up a sample of experimental units into two groups and calculates the sample mean for each group.We compare \\(\\overline{X}_A\\) and \\(\\overline {X}_B\\): \\(\\overline{X}_A - \\overline{X}_B\\).\nThe standard deviation of \\(\\overline{X}_A - \\overline{X}_B\\) requires calculation: Use a two-sample test."
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#categorical-continuous-variables-3",
-    "href": "2022-Extension-REU-slides.html#categorical-continuous-variables-3",
-    "title": "A Short Overview of Statistics",
-    "section": "Categorical + Continuous Variables",
-    "text": "Categorical + Continuous Variables\nRepeated Measures"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#analysis-of-variance",
-    "href": "2022-Extension-REU-slides.html#analysis-of-variance",
-    "title": "A Short Overview of Statistics",
-    "section": "Analysis of Variance",
-    "text": "Analysis of Variance\n\nUsed for multiple groups\n\nSuppose we have a group of schoolchildren separated by grade, and we want to examine the relationship between grade and height."
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#analysis-of-variance-1",
-    "href": "2022-Extension-REU-slides.html#analysis-of-variance-1",
-    "title": "A Short Overview of Statistics",
-    "section": "Analysis of Variance",
-    "text": "Analysis of Variance\n\nIf height is important, students in a single grade should be more similar than students across different grades."
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#analysis-of-variance-2",
-    "href": "2022-Extension-REU-slides.html#analysis-of-variance-2",
-    "title": "A Short Overview of Statistics",
-    "section": "Analysis of Variance",
-    "text": "Analysis of Variance\nGoal: determine similarity within groups\n\nwithin-groups sum-of-squares\nSquare the deviations from the group mean and add them up\nbetween-groups sum-of-squares\nSum of squared differences of the class average and the overall average for each student"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#analysis-of-variance-3",
-    "href": "2022-Extension-REU-slides.html#analysis-of-variance-3",
-    "title": "A Short Overview of Statistics",
-    "section": "Analysis of Variance",
-    "text": "Analysis of Variance\nResults from ANOVA are shown in tables like this:\n\n\n\n\n\nFactor\nDf\nSum Sq\nMean Sq\nF value\nPr(>F)\n\n\n\n\ngrade\n2\n112\n56.000000\n26.25\n1.26e-05\n\n\nResiduals\n15\n32\n2.133333\n\n\n\n\nTotal\n17\n144\n\n\n\n\n\n\n\n\nThe F-value is the statistic, and is compared to an F(df1, df2) distribution - in this case, F(2, 15) to get a p-value."
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#two-continuous-variables",
-    "href": "2022-Extension-REU-slides.html#two-continuous-variables",
-    "title": "A Short Overview of Statistics",
-    "section": "Two Continuous Variables",
-    "text": "Two Continuous Variables\n\nWe want to know if there is a linear association between x and y"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#two-continuous-variables-1",
-    "href": "2022-Extension-REU-slides.html#two-continuous-variables-1",
-    "title": "A Short Overview of Statistics",
-    "section": "Two Continuous Variables",
-    "text": "Two Continuous Variables\n\nIf the slope of the line is nonzero, there is a linear association"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#two-continuous-variables-2",
-    "href": "2022-Extension-REU-slides.html#two-continuous-variables-2",
-    "title": "A Short Overview of Statistics",
-    "section": "Two Continuous Variables",
-    "text": "Two Continuous Variables\n\nWe need to test whether that slope is significantly different from 0"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#two-continuous-variables-3",
-    "href": "2022-Extension-REU-slides.html#two-continuous-variables-3",
-    "title": "A Short Overview of Statistics",
-    "section": "Two Continuous Variables",
-    "text": "Two Continuous Variables\n\nContinuous variables: \\(x\\) and \\(y\\)\nStatistic: \\(a\\), the sample slope\nSimulation method: shuffle values of \\(y\\) relative to \\(x\\)\nTheoretical distribution: \\(t_{n-2}\\), where \\(n\\) is the number of observations"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#underlying-logic---testing-1",
-    "href": "2022-Extension-REU-slides.html#underlying-logic---testing-1",
-    "title": "A Short Overview of Statistics",
-    "section": "Underlying Logic - Testing",
-    "text": "Underlying Logic - Testing"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#underlying-logic---testing-2",
-    "href": "2022-Extension-REU-slides.html#underlying-logic---testing-2",
-    "title": "A Short Overview of Statistics",
-    "section": "Underlying Logic - Testing",
-    "text": "Underlying Logic - Testing\n\nthe region that is “more extreme” than the observed value is summarized as the p-value – the area of that region.\n\np-values lower than \\(\\alpha = 0.05\\), a pre-specified cutoff are considered “statistically significant”\nthat is, they should lead to a rejection of the null hypothesis"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#categorical-continuous-variables-4",
-    "href": "2022-Extension-REU-slides.html#categorical-continuous-variables-4",
-    "title": "A Short Overview of Statistics",
-    "section": "Categorical + Continuous Variables",
-    "text": "Categorical + Continuous Variables\nRepeated Measures"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#categorical-continuous-variables-5",
-    "href": "2022-Extension-REU-slides.html#categorical-continuous-variables-5",
-    "title": "A Short Overview of Statistics",
-    "section": "Categorical + Continuous Variables",
-    "text": "Categorical + Continuous Variables\nMatched Pairs"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#categorical-continuous-variables-6",
-    "href": "2022-Extension-REU-slides.html#categorical-continuous-variables-6",
-    "title": "A Short Overview of Statistics",
-    "section": "Categorical + Continuous Variables",
-    "text": "Categorical + Continuous Variables\nMatched Pairs"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#categorical-continuous-variables-7",
-    "href": "2022-Extension-REU-slides.html#categorical-continuous-variables-7",
-    "title": "A Short Overview of Statistics",
-    "section": "Categorical + Continuous Variables",
-    "text": "Categorical + Continuous Variables\nMatched Pairs"
-  },
-  {
-    "objectID": "2022-Extension-REU-slides.html#categorical-continuous-variables-8",
-    "href": "2022-Extension-REU-slides.html#categorical-continuous-variables-8",
-    "title": "A Short Overview of Statistics",
-    "section": "Categorical + Continuous Variables",
-    "text": "Categorical + Continuous Variables\nMatched Pairs"
   },
   {
     "objectID": "2022-Extension-REU-slides.html#two-group-tests",
@@ -308,60 +217,60 @@
     "text": "Matched Pairs"
   },
   {
-    "objectID": "2022-Extension-REU-slides.html#statistical-test-logic",
-    "href": "2022-Extension-REU-slides.html#statistical-test-logic",
+    "objectID": "2022-Extension-REU-slides.html#analysis-of-variance",
+    "href": "2022-Extension-REU-slides.html#analysis-of-variance",
     "title": "A Short Overview of Statistics",
-    "section": "Statistical Test Logic",
-    "text": "Statistical Test Logic\n\nGoal: Are the experiment results are compatible with the null hypothesis?\nif the region that is “more extreme” than the observed value is very small, then the experimental results are surprising\n\nThis suggests the null hypothesis might not be reliable\nReject \\(H_0\\) in favor of the alternative"
+    "section": "Analysis of Variance",
+    "text": "Analysis of Variance\n\nUsed for multiple groups\n\nSuppose we have a group of schoolchildren separated by grade, and we want to examine the relationship between grade and height."
   },
   {
-    "objectID": "2022-Extension-REU-slides.html#statistical-test-logic-1",
-    "href": "2022-Extension-REU-slides.html#statistical-test-logic-1",
+    "objectID": "2022-Extension-REU-slides.html#analysis-of-variance-1",
+    "href": "2022-Extension-REU-slides.html#analysis-of-variance-1",
     "title": "A Short Overview of Statistics",
-    "section": "Statistical Test Logic",
-    "text": "Statistical Test Logic"
+    "section": "Analysis of Variance",
+    "text": "Analysis of Variance\n\nIf height is important, students in a single grade should be more similar than students across different grades."
   },
   {
-    "objectID": "2022-Extension-REU-slides.html#statistical-test-logic-2",
-    "href": "2022-Extension-REU-slides.html#statistical-test-logic-2",
+    "objectID": "2022-Extension-REU-slides.html#analysis-of-variance-2",
+    "href": "2022-Extension-REU-slides.html#analysis-of-variance-2",
     "title": "A Short Overview of Statistics",
-    "section": "Statistical Test Logic",
-    "text": "Statistical Test Logic\n\nthe region that is “more extreme” than the observed value is summarized as the p-value – the area of that region.\n\np-values lower than \\(\\alpha = 0.05\\), a pre-specified cutoff are considered “statistically significant”\nthat is, they should lead to a rejection of the null hypothesis"
+    "section": "Analysis of Variance",
+    "text": "Analysis of Variance\nGoal: determine similarity within groups\n\nwithin-groups sum-of-squares\nSquare the deviations from the group mean and add them up\nbetween-groups sum-of-squares\nSum of squared differences of the class average and the overall average for each student"
   },
   {
-    "objectID": "2022-Extension-REU-slides.html#two-sided-tests",
-    "href": "2022-Extension-REU-slides.html#two-sided-tests",
+    "objectID": "2022-Extension-REU-slides.html#analysis-of-variance-3",
+    "href": "2022-Extension-REU-slides.html#analysis-of-variance-3",
     "title": "A Short Overview of Statistics",
-    "section": "Two Sided Tests",
-    "text": "Two Sided Tests\n\nIf we don’t know/care whether \\(x < a\\) or \\(x > a\\), we use a two-sided test\n\n\nYou can experiment with two-sided tests here:\nhttps://shiny.srvanderplas.com/APL/ and click on “One Continuous Variable”"
+    "section": "Analysis of Variance",
+    "text": "Analysis of Variance\nResults from ANOVA are shown in tables like this:\n\n\n\n\n\nFactor\nDf\nSum Sq\nMean Sq\nF value\nPr(>F)\n\n\n\n\ngrade\n2\n112\n56.000000\n26.25\n1.26e-05\n\n\nResiduals\n15\n32\n2.133333\n\n\n\n\nTotal\n17\n144\n\n\n\n\n\n\n\n\nThe F-value is the statistic, and is compared to an F(df1, df2) distribution - in this case, F(2, 15) to get a p-value."
   },
   {
-    "objectID": "2022-Extension-REU-slides.html#statistical-tasks-1",
-    "href": "2022-Extension-REU-slides.html#statistical-tasks-1",
+    "objectID": "2022-Extension-REU-slides.html#two-continuous-variables",
+    "href": "2022-Extension-REU-slides.html#two-continuous-variables",
     "title": "A Short Overview of Statistics",
-    "section": "Statistical Tasks",
-    "text": "Statistical Tasks\nExperimental Design: What’s the best way to collect data?"
+    "section": "Two Continuous Variables",
+    "text": "Two Continuous Variables\n\nWe want to know if there is a linear association between x and y"
   },
   {
-    "objectID": "2022-Extension-REU-slides.html#statistical-tasks-2",
-    "href": "2022-Extension-REU-slides.html#statistical-tasks-2",
+    "objectID": "2022-Extension-REU-slides.html#two-continuous-variables-1",
+    "href": "2022-Extension-REU-slides.html#two-continuous-variables-1",
     "title": "A Short Overview of Statistics",
-    "section": "Statistical Tasks",
-    "text": "Statistical Tasks\nInference: What does the data tell us (about the population)?"
+    "section": "Two Continuous Variables",
+    "text": "Two Continuous Variables\n\nIf the slope of the line is nonzero, there is a linear association"
   },
   {
-    "objectID": "2022-Extension-REU-slides.html#statistical-tasks-3",
-    "href": "2022-Extension-REU-slides.html#statistical-tasks-3",
+    "objectID": "2022-Extension-REU-slides.html#two-continuous-variables-2",
+    "href": "2022-Extension-REU-slides.html#two-continuous-variables-2",
     "title": "A Short Overview of Statistics",
-    "section": "Statistical Tasks",
-    "text": "Statistical Tasks\nPrediction: What will happen next?"
+    "section": "Two Continuous Variables",
+    "text": "Two Continuous Variables\n\nWe need to test whether that slope is significantly different from 0"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Tutorials",
-    "section": "",
-    "text": "2022 Extension REU Statistics Primer and slides"
+    "objectID": "2022-Extension-REU-slides.html#two-continuous-variables-3",
+    "href": "2022-Extension-REU-slides.html#two-continuous-variables-3",
+    "title": "A Short Overview of Statistics",
+    "section": "Two Continuous Variables",
+    "text": "Two Continuous Variables\n\nContinuous variables: \\(x\\) and \\(y\\)\nStatistic: \\(a\\), the sample slope\nSimulation method: shuffle values of \\(y\\) relative to \\(x\\)\nTheoretical distribution: \\(t_{n-2}\\), where \\(n\\) is the number of observations"
   },
   {
     "objectID": "extension.html",
