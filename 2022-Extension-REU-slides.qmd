@@ -18,35 +18,51 @@ library(icons)
 
 > The science of developing and studying methods for collecting, analyzing, interpreting, and presenting empirical data
 
-::: columns
-::: {.column width="75%"}
+::: {.columns style="font-size:smaller"}
+::: {.column width="80%"}
 -   How should I conduct my experiment?
 -   What is the best way to test my hypothesis?
--   What is the true value of \_\_\_\_ (and how precisely do I know that value)?
+-   What is the true value of \_\_\_\_     
+(and how precisely do I know that value)?
 -   What does my experiment/sample tell me about my data?
 -   What is the future value of \_\_\_\_ given what I know now?
 :::
 
-::: {.column width="25%"}
+::: {.column width="20%"}
 ![](image/Ruler-fuzzball.png)
 :::
 :::
 
-## Statistical Tasks
+## Statistical Tasks {.center}
 
-+---------------------------------------------------------------+-------------------------------------------------------------------+
-| **Description**: What does the data say?                      | **Inference**: What does the data tell us (about the population)? |
-|                                                               |                                                                   |
-| ![](image/histogram-sample-stats.png)                         | ![](image/sample-population.png)                                  |
-+---------------------------------------------------------------+-------------------------------------------------------------------+
-| **Experimental Design**: What's the best way to collect data? | **Prediction**: What will happen next?                            |
-|                                                               |                                                                   |
-| ![](image/wizard-list.png)                                    | ![](image/crystal-ball-fuzzball.png)                              |
-+---------------------------------------------------------------+-------------------------------------------------------------------+
+
+**Description**: What does the data say?
+
+![](image/histogram-sample-stats.png){width="40%" fig-align="center"}
+
+## Statistical Tasks {.center}
+
+**Experimental Design**: What's the best way to collect data?
+
+![](image/wizard-list.png){width="50%" fig-align="center"}
+
+
+## Statistical Tasks {.center}
+
+**Inference**: What does the data tell us (about the population)? 
+
+![](image/sample-population.png){width="50%" fig-align="center"}
+
+## Statistical Tasks {.center}
+
+**Prediction**: What will happen next?
+
+![](image/crystal-ball-fuzzball.png){width="50%" fig-align="center"}
+
 
 ## An Historical Example {.center .middle}
 
-### The Logic of Statistical Hypothesis Testing
+### The Logic of Hypothesis Testing
 
 ![](image/tea-tasting-fuzzballs.png){fig-align="center" width="100%"}
 
@@ -92,8 +108,14 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
 -   What effect does the number of test cups have on the results?
 
     -   Assuming the number of observed cups is the same as the number of test cups
-
     -   Assuming the number of observed cups is less than the number of test cups
+
+
+::: aside
+
+Another link to the same applet is [[https://srvanderplas.shinyapps.io/UNL-APL-workshop/]{.emph}](https://srvanderplas.shinyapps.io/UNL-APL-workshop/)
+
+:::
 
 ## Hypothesis Testing Logic {.smaller}
 
@@ -143,7 +165,7 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
 -   How different is the simulation p-value from the theoretical p-value? Does this change when you increase the number of samples?
 
 
-## Underlying Logic - Testing
+## Statistical Test Logic
 
 -   [Goal:]{.emph .cerulean} Are the experiment results are compatible with the null hypothesis?
 
@@ -152,11 +174,13 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
     -   This suggests the null hypothesis might not be reliable
     -   Reject $H_0$ in favor of the alternative
 
-## Underlying Logic - Testing
+## Statistical Test Logic
+
 
 ![](image/p-value-logic.svg)
 
-## Underlying Logic - Testing
+## Statistical Test Logic
+
 
 -   the region that is "more extreme" than the observed value is summarized as the p-value -- the area of that region.
 
@@ -165,7 +189,7 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
 
 ![](image/p-value.png){fig-align="center" width="50%"}
 
-## Underlying Logic - Two Sided Tests
+## Two Sided Tests
 
 - If we don't know/care whether $x < a$ or $x > a$, we use a **two-sided test**
 
@@ -181,7 +205,7 @@ You can experiment with two-sided tests here:
 
 -   This is called a **confidence interval**
 
-![](image/confidence-interval-best-est-uncertanty.svg){width="50%"}
+![](image/confidence-interval-best-est-uncertanty.svg){width="50%" fig-align="center"}
 
 ## Confidence Intervals
 
@@ -211,10 +235,13 @@ You can experiment with two-sided tests here:
 
 ## One Continuous Variable
 
--   Statistic: $$t = \frac{\overline x - \mu}{s/\sqrt{n}}$$ where $\overline x$ is the sample mean, $s$ is the sample standard deviation, $\mu$ is the hypothesized mean, and $n$ is the sample size
+-   Statistic: $\displaystyle t = \frac{\overline x - \mu}{s/\sqrt{n}}$ where 
+    - [$\overline x$ is the sample mean,]{style="font-size:smaller;"}
+    - [$s$ is the sample standard deviation,]{style="font-size:smaller"} 
+    - [$\mu$ is the hypothesized mean, and]{style="font-size:smaller"}
+    - [$n$ is the sample size]{style="font-size:smaller"}
 
 -   Simulation method: none
-
 -   Theoretical distribution: $t$ with $n-1$ degrees of freedom
 
 [[https://shiny.srvanderplas.com/APL/]{.emph}](https://shiny.srvanderplas.com/APL) and click on "One Continuous Variable"
@@ -227,9 +254,10 @@ You can experiment with two-sided tests here:
 
 -   Statistic: $\overline x_1 - \overline x_2$
 
--   Simulation method: shuffle group labels (flash cards if by hand)
+-   Simulation method: shuffle group labels
 
--   Theoretical distribution: $t$ (degrees of freedom are a bit complicated)
+-   Theoretical distribution: $t$    
+(degrees of freedom are a bit complicated)
 
 [[https://shiny.srvanderplas.com/APL/]{.emph}](https://shiny.srvanderplas.com/APL) and click on "Categorical + Continuous Variables"
 

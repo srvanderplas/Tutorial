@@ -4,21 +4,21 @@
     "href": "2022-Extension-REU-slides.html#what-is-statistics",
     "title": "A Short Overview of Statistics",
     "section": "What is Statistics?",
-    "text": "What is Statistics?\n\nThe science of developing and studying methods for collecting, analyzing, interpreting, and presenting empirical data\n\n\n\n\nHow should I conduct my experiment?\nWhat is the best way to test my hypothesis?\nWhat is the true value of ____ (and how precisely do I know that value)?\nWhat does my experiment/sample tell me about my data?\nWhat is the future value of ____ given what I know now?"
+    "text": "What is Statistics?\n\nThe science of developing and studying methods for collecting, analyzing, interpreting, and presenting empirical data\n\n\n\n\nHow should I conduct my experiment?\nWhat is the best way to test my hypothesis?\nWhat is the true value of ____\n(and how precisely do I know that value)?\nWhat does my experiment/sample tell me about my data?\nWhat is the future value of ____ given what I know now?"
   },
   {
     "objectID": "2022-Extension-REU-slides.html#statistical-tasks",
     "href": "2022-Extension-REU-slides.html#statistical-tasks",
     "title": "A Short Overview of Statistics",
     "section": "Statistical Tasks",
-    "text": "Statistical Tasks\n\n\n\n\n\n\n\nDescription: What does the data say?\n\nInference: What does the data tell us (about the population)?\n\n\n\nExperimental Design: What’s the best way to collect data?\n\nPrediction: What will happen next?"
+    "text": "Statistical Tasks\nDescription: What does the data say?"
   },
   {
     "objectID": "2022-Extension-REU-slides.html#an-historical-example",
     "href": "2022-Extension-REU-slides.html#an-historical-example",
     "title": "A Short Overview of Statistics",
     "section": "An Historical Example",
-    "text": "An Historical Example\nThe Logic of Statistical Hypothesis Testing\n\nCan someone tell whether tea or milk is added first to a cup?\n\n4 cups of tea with milk first  , 4 cups of tea with tea first  \nRandomize the order\nTest the cups and make predictions for all 8 cups\n\n\nWhat is the probability that someone gets all 8 correct?"
+    "text": "An Historical Example\nThe Logic of Hypothesis Testing\n\nCan someone tell whether tea or milk is added first to a cup?\n\n4 cups of tea with milk first  , 4 cups of tea with tea first  \nRandomize the order\nTest the cups and make predictions for all 8 cups\n\n\nWhat is the probability that someone gets all 8 correct?"
   },
   {
     "objectID": "2022-Extension-REU-slides.html#a-lady-tasting-tea",
@@ -39,7 +39,7 @@
     "href": "2022-Extension-REU-slides.html#try-it-out",
     "title": "A Short Overview of Statistics",
     "section": "Try it out!",
-    "text": "Try it out!\nGo to https://shiny.srvanderplas.com/APL and start with the Tea Tasting tab.\n\nWhat effect does the number of simulations have on the results?\nWhat effect does the number of test cups have on the results?\n\nAssuming the number of observed cups is the same as the number of test cups\nAssuming the number of observed cups is less than the number of test cups"
+    "text": "Try it out!\nGo to https://shiny.srvanderplas.com/APL and start with the Tea Tasting tab.\n\nWhat effect does the number of simulations have on the results?\nWhat effect does the number of test cups have on the results?\n\nAssuming the number of observed cups is the same as the number of test cups\nAssuming the number of observed cups is less than the number of test cups\n\n\n\n\nAnother link to the same applet is https://srvanderplas.shinyapps.io/UNL-APL-workshop/"
   },
   {
     "objectID": "2022-Extension-REU-slides.html#hypothesis-testing-logic",
@@ -109,7 +109,7 @@
     "href": "2022-Extension-REU-slides.html#one-continuous-variable",
     "title": "A Short Overview of Statistics",
     "section": "One Continuous Variable",
-    "text": "One Continuous Variable\n\nStatistic: \\[t = \\frac{\\overline x - \\mu}{s/\\sqrt{n}}\\] where \\(\\overline x\\) is the sample mean, \\(s\\) is the sample standard deviation, \\(\\mu\\) is the hypothesized mean, and \\(n\\) is the sample size\nSimulation method: none\nTheoretical distribution: \\(t\\) with \\(n-1\\) degrees of freedom\n\nhttps://shiny.srvanderplas.com/APL/ and click on “One Continuous Variable”"
+    "text": "One Continuous Variable\n\nStatistic: \\(\\displaystyle t = \\frac{\\overline x - \\mu}{s/\\sqrt{n}}\\) where\n\n\\(\\overline x\\) is the sample mean,\n\\(s\\) is the sample standard deviation,\n\\(\\mu\\) is the hypothesized mean, and\n\\(n\\) is the sample size\n\nSimulation method: none\nTheoretical distribution: \\(t\\) with \\(n-1\\) degrees of freedom\n\nhttps://shiny.srvanderplas.com/APL/ and click on “One Continuous Variable”"
   },
   {
     "objectID": "2022-Extension-REU-slides.html#categorical-continuous-variables",
@@ -249,7 +249,7 @@
     "href": "2022-Extension-REU-slides.html#two-group-tests",
     "title": "A Short Overview of Statistics",
     "section": "Two-group Tests",
-    "text": "Two-group Tests\n\nCategorical variable: Group 1 or Group 2?\nContinuous variable: Some measurement\nStatistic: \\(\\overline x_1 - \\overline x_2\\)\nSimulation method: shuffle group labels (flash cards if by hand)\nTheoretical distribution: \\(t\\) (degrees of freedom are a bit complicated)\n\nhttps://shiny.srvanderplas.com/APL/ and click on “Categorical + Continuous Variables”"
+    "text": "Two-group Tests\n\nCategorical variable: Group 1 or Group 2?\nContinuous variable: Some measurement\nStatistic: \\(\\overline x_1 - \\overline x_2\\)\nSimulation method: shuffle group labels\nTheoretical distribution: \\(t\\)\n(degrees of freedom are a bit complicated)\n\nhttps://shiny.srvanderplas.com/APL/ and click on “Categorical + Continuous Variables”"
   },
   {
     "objectID": "2022-Extension-REU-slides.html#two-group-tests-1",
@@ -306,5 +306,54 @@
     "title": "A Short Overview of Statistics",
     "section": "Matched Pairs",
     "text": "Matched Pairs"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#statistical-test-logic",
+    "href": "2022-Extension-REU-slides.html#statistical-test-logic",
+    "title": "A Short Overview of Statistics",
+    "section": "Statistical Test Logic",
+    "text": "Statistical Test Logic\n\nGoal: Are the experiment results are compatible with the null hypothesis?\nif the region that is “more extreme” than the observed value is very small, then the experimental results are surprising\n\nThis suggests the null hypothesis might not be reliable\nReject \\(H_0\\) in favor of the alternative"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#statistical-test-logic-1",
+    "href": "2022-Extension-REU-slides.html#statistical-test-logic-1",
+    "title": "A Short Overview of Statistics",
+    "section": "Statistical Test Logic",
+    "text": "Statistical Test Logic"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#statistical-test-logic-2",
+    "href": "2022-Extension-REU-slides.html#statistical-test-logic-2",
+    "title": "A Short Overview of Statistics",
+    "section": "Statistical Test Logic",
+    "text": "Statistical Test Logic\n\nthe region that is “more extreme” than the observed value is summarized as the p-value – the area of that region.\n\np-values lower than \\(\\alpha = 0.05\\), a pre-specified cutoff are considered “statistically significant”\nthat is, they should lead to a rejection of the null hypothesis"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#two-sided-tests",
+    "href": "2022-Extension-REU-slides.html#two-sided-tests",
+    "title": "A Short Overview of Statistics",
+    "section": "Two Sided Tests",
+    "text": "Two Sided Tests\n\nIf we don’t know/care whether \\(x < a\\) or \\(x > a\\), we use a two-sided test\n\n\nYou can experiment with two-sided tests here:\nhttps://shiny.srvanderplas.com/APL/ and click on “One Continuous Variable”"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#statistical-tasks-1",
+    "href": "2022-Extension-REU-slides.html#statistical-tasks-1",
+    "title": "A Short Overview of Statistics",
+    "section": "Statistical Tasks",
+    "text": "Statistical Tasks\nExperimental Design: What’s the best way to collect data?"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#statistical-tasks-2",
+    "href": "2022-Extension-REU-slides.html#statistical-tasks-2",
+    "title": "A Short Overview of Statistics",
+    "section": "Statistical Tasks",
+    "text": "Statistical Tasks\nInference: What does the data tell us (about the population)?"
+  },
+  {
+    "objectID": "2022-Extension-REU-slides.html#statistical-tasks-3",
+    "href": "2022-Extension-REU-slides.html#statistical-tasks-3",
+    "title": "A Short Overview of Statistics",
+    "section": "Statistical Tasks",
+    "text": "Statistical Tasks\nPrediction: What will happen next?"
   }
 ]

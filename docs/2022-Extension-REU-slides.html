@@ -327,46 +327,44 @@
 <blockquote>
 <p>The science of developing and studying methods for collecting, analyzing, interpreting, and presenting empirical data</p>
 </blockquote>
-<div class="columns">
-<div class="column" style="width:75%;">
+<div class="columns" style="font-size:smaller">
+<div class="column" style="width:80%;">
 <ul>
 <li>How should I conduct my experiment?</li>
 <li>What is the best way to test my hypothesis?</li>
-<li>What is the true value of ____ (and how precisely do I know that value)?</li>
+<li>What is the true value of ____<br>
+(and how precisely do I know that value)?</li>
 <li>What does my experiment/sample tell me about my data?</li>
 <li>What is the future value of ____ given what I know now?</li>
 </ul>
-</div><div class="column" style="width:25%;">
+</div><div class="column" style="width:20%;">
 <p><img data-src="image/Ruler-fuzzball.png"></p>
 </div>
 </div>
 </section>
-<section id="statistical-tasks" class="slide level2">
+<section id="statistical-tasks" class="slide level2 center">
 <h2>Statistical Tasks</h2>
-<table>
-<colgroup>
-<col style="width: 48%">
-<col style="width: 51%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Description</strong>: What does the data say?</p>
-<p><img data-src="image/histogram-sample-stats.png"></p></td>
-<td><p><strong>Inference</strong>: What does the data tell us (about the population)?</p>
-<p><img data-src="image/sample-population.png"></p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Experimental Design</strong>: What’s the best way to collect data?</p>
-<p><img data-src="image/wizard-list.png"></p></td>
-<td><p><strong>Prediction</strong>: What will happen next?</p>
-<p><img data-src="image/crystal-ball-fuzzball.png"></p></td>
-</tr>
-</tbody>
-</table>
-</section>
+<p><strong>Description</strong>: What does the data say?</p>
+
+<img data-src="image/histogram-sample-stats.png" style="width:40.0%" class="r-stretch quarto-figure-center"></section>
+<section id="statistical-tasks-1" class="slide level2 center">
+<h2>Statistical Tasks</h2>
+<p><strong>Experimental Design</strong>: What’s the best way to collect data?</p>
+
+<img data-src="image/wizard-list.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
+<section id="statistical-tasks-2" class="slide level2 center">
+<h2>Statistical Tasks</h2>
+<p><strong>Inference</strong>: What does the data tell us (about the population)?</p>
+
+<img data-src="image/sample-population.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
+<section id="statistical-tasks-3" class="slide level2 center">
+<h2>Statistical Tasks</h2>
+<p><strong>Prediction</strong>: What will happen next?</p>
+
+<img data-src="image/crystal-ball-fuzzball.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
 <section id="an-historical-example" class="slide level2 center middle">
 <h2>An Historical Example</h2>
-<h3 id="the-logic-of-statistical-hypothesis-testing">The Logic of Statistical Hypothesis Testing</h3>
+<h3 id="the-logic-of-hypothesis-testing">The Logic of Hypothesis Testing</h3>
 
 <img data-src="image/tea-tasting-fuzzballs.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p>Can someone tell whether tea or milk is added first to a cup?</p>
 <ul>
@@ -407,11 +405,14 @@
 <li><p>What effect does the number of simulations have on the results?</p></li>
 <li><p>What effect does the number of test cups have on the results?</p>
 <ul>
-<li><p>Assuming the number of observed cups is the same as the number of test cups</p></li>
-<li><p>Assuming the number of observed cups is less than the number of test cups</p></li>
+<li>Assuming the number of observed cups is the same as the number of test cups</li>
+<li>Assuming the number of observed cups is less than the number of test cups</li>
 </ul></li>
 </ul>
-</section>
+
+<aside><div>
+<p>Another link to the same applet is <a href="https://srvanderplas.shinyapps.io/UNL-APL-workshop/"><span class="emph">https://srvanderplas.shinyapps.io/UNL-APL-workshop/</span></a></p>
+</div></aside></section>
 <section id="hypothesis-testing-logic" class="slide level2 smaller">
 <h2>Hypothesis Testing Logic</h2>
 <div class="columns">
@@ -452,8 +453,8 @@ Note: At this point, we are doing tests examining values greater than the observ
 <li><p>How different is the simulation p-value from the theoretical p-value? Does this change when you increase the number of samples?</p></li>
 </ul>
 </section>
-<section id="underlying-logic---testing" class="slide level2">
-<h2>Underlying Logic - Testing</h2>
+<section id="statistical-test-logic" class="slide level2">
+<h2>Statistical Test Logic</h2>
 <ul>
 <li><p><span class="emph cerulean">Goal:</span> Are the experiment results are compatible with the null hypothesis?</p></li>
 <li><p>if the region that is “more extreme” than the observed value is very small, then the experimental results are surprising</p>
@@ -463,12 +464,12 @@ Note: At this point, we are doing tests examining values greater than the observ
 </ul></li>
 </ul>
 </section>
-<section id="underlying-logic---testing-1" class="slide level2">
-<h2>Underlying Logic - Testing</h2>
+<section id="statistical-test-logic-1" class="slide level2">
+<h2>Statistical Test Logic</h2>
 
 <img data-src="image/p-value-logic.svg" class="r-stretch"></section>
-<section id="underlying-logic---testing-2" class="slide level2">
-<h2>Underlying Logic - Testing</h2>
+<section id="statistical-test-logic-2" class="slide level2">
+<h2>Statistical Test Logic</h2>
 <ul>
 <li><p>the region that is “more extreme” than the observed value is summarized as the p-value – the area of that region.</p>
 <ul>
@@ -478,8 +479,8 @@ that is, they should lead to a rejection of the null hypothesis</li>
 </ul>
 
 <img data-src="image/p-value.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
-<section id="underlying-logic---two-sided-tests" class="slide level2">
-<h2>Underlying Logic - Two Sided Tests</h2>
+<section id="two-sided-tests" class="slide level2">
+<h2>Two Sided Tests</h2>
 <ul>
 <li>If we don’t know/care whether <span class="math inline">\(x &lt; a\)</span> or <span class="math inline">\(x &gt; a\)</span>, we use a <strong>two-sided test</strong></li>
 </ul>
@@ -494,7 +495,7 @@ that is, they should lead to a rejection of the null hypothesis</li>
 <li><p>This is called a <strong>confidence interval</strong></p></li>
 </ul>
 
-<img data-src="image/confidence-interval-best-est-uncertanty.svg" style="width:50.0%" class="r-stretch"></section>
+<img data-src="image/confidence-interval-best-est-uncertanty.svg" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
 <section id="confidence-intervals-1" class="slide level2">
 <h2>Confidence Intervals</h2>
 <ul>
@@ -526,9 +527,15 @@ that is, they should lead to a rejection of the null hypothesis</li>
 <section id="one-continuous-variable" class="slide level2">
 <h2>One Continuous Variable</h2>
 <ul>
-<li><p>Statistic: <span class="math display">\[t = \frac{\overline x - \mu}{s/\sqrt{n}}\]</span> where <span class="math inline">\(\overline x\)</span> is the sample mean, <span class="math inline">\(s\)</span> is the sample standard deviation, <span class="math inline">\(\mu\)</span> is the hypothesized mean, and <span class="math inline">\(n\)</span> is the sample size</p></li>
-<li><p>Simulation method: none</p></li>
-<li><p>Theoretical distribution: <span class="math inline">\(t\)</span> with <span class="math inline">\(n-1\)</span> degrees of freedom</p></li>
+<li>Statistic: <span class="math inline">\(\displaystyle t = \frac{\overline x - \mu}{s/\sqrt{n}}\)</span> where
+<ul>
+<li><span style="font-size:smaller;"><span class="math inline">\(\overline x\)</span> is the sample mean,</span></li>
+<li><span style="font-size:smaller"><span class="math inline">\(s\)</span> is the sample standard deviation,</span></li>
+<li><span style="font-size:smaller"><span class="math inline">\(\mu\)</span> is the hypothesized mean, and</span></li>
+<li><span style="font-size:smaller"><span class="math inline">\(n\)</span> is the sample size</span></li>
+</ul></li>
+<li>Simulation method: none</li>
+<li>Theoretical distribution: <span class="math inline">\(t\)</span> with <span class="math inline">\(n-1\)</span> degrees of freedom</li>
 </ul>
 <p><a href="https://shiny.srvanderplas.com/APL"><span class="emph">https://shiny.srvanderplas.com/APL/</span></a> and click on “One Continuous Variable”</p>
 </section>
@@ -538,8 +545,9 @@ that is, they should lead to a rejection of the null hypothesis</li>
 <li><p>Categorical variable: Group 1 or Group 2?</p></li>
 <li><p>Continuous variable: Some measurement</p></li>
 <li><p>Statistic: <span class="math inline">\(\overline x_1 - \overline x_2\)</span></p></li>
-<li><p>Simulation method: shuffle group labels (flash cards if by hand)</p></li>
-<li><p>Theoretical distribution: <span class="math inline">\(t\)</span> (degrees of freedom are a bit complicated)</p></li>
+<li><p>Simulation method: shuffle group labels</p></li>
+<li><p>Theoretical distribution: <span class="math inline">\(t\)</span><br>
+(degrees of freedom are a bit complicated)</p></li>
 </ul>
 <p><a href="https://shiny.srvanderplas.com/APL"><span class="emph">https://shiny.srvanderplas.com/APL/</span></a> and click on “Categorical + Continuous Variables”</p>
 </section>
