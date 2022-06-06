@@ -1,0 +1,14 @@
+---
+title: "Extension Projects"
+---
+
+
+- Adapted Primary Literature    
+Statistics primer for high school teachers adapting scientific papers to use in high school courses. 
+    - [Book](srvanderplas.github.io/Extension-APL)
+    - [Applet](shiny.srvanderplas.com/APL)
+    - [Slides](srvanderplas.github.io/Presentations/2021-Extension-APL/)
+
+- 2022 REU
+    - [Material](2022-Extension-REU.html)
+    - [Slides](docs/2022-Extension-REU-slides.html)

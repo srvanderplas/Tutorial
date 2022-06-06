@@ -22,8 +22,8 @@ library(icons)
 ::: {.column width="80%"}
 -   How should I conduct my experiment?
 -   What is the best way to test my hypothesis?
--   What is the true value of \_\_\_\_     
-(and how precisely do I know that value)?
+-   What is the true value of \_\_\_\_\
+    (and how precisely do I know that value)?
 -   What does my experiment/sample tell me about my data?
 -   What is the future value of \_\_\_\_ given what I know now?
 :::
@@ -35,7 +35,6 @@ library(icons)
 
 ## Statistical Tasks {.center}
 
-
 **Description**: What does the data say?
 
 ![](image/histogram-sample-stats.png){width="40%" fig-align="center"}
@@ -46,10 +45,9 @@ library(icons)
 
 ![](image/wizard-list.png){width="50%" fig-align="center"}
 
-
 ## Statistical Tasks {.center}
 
-**Inference**: What does the data tell us (about the population)? 
+**Inference**: What does the data tell us (about the population)?
 
 ![](image/sample-population.png){width="50%" fig-align="center"}
 
@@ -58,7 +56,6 @@ library(icons)
 **Prediction**: What will happen next?
 
 ![](image/crystal-ball-fuzzball.png){width="50%" fig-align="center"}
-
 
 ## An Historical Example {.center .middle}
 
@@ -110,11 +107,8 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
     -   Assuming the number of observed cups is the same as the number of test cups
     -   Assuming the number of observed cups is less than the number of test cups
 
-
 ::: aside
-
 Another link to the same applet is [[https://srvanderplas.shinyapps.io/UNL-APL-workshop/]{.emph}](https://srvanderplas.shinyapps.io/UNL-APL-workshop/)
-
 :::
 
 ## Hypothesis Testing Logic {.smaller}
@@ -164,7 +158,6 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
 
 -   How different is the simulation p-value from the theoretical p-value? Does this change when you increase the number of samples?
 
-
 ## Statistical Test Logic
 
 -   [Goal:]{.emph .cerulean} Are the experiment results are compatible with the null hypothesis?
@@ -176,11 +169,9 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
 
 ## Statistical Test Logic
 
-
 ![](image/p-value-logic.svg)
 
 ## Statistical Test Logic
-
 
 -   the region that is "more extreme" than the observed value is summarized as the p-value -- the area of that region.
 
@@ -191,7 +182,7 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
 
 ## Two Sided Tests
 
-- If we don't know/care whether $x < a$ or $x > a$, we use a **two-sided test**
+-   If we don't know/care whether $x < a$ or $x > a$, we use a **two-sided test**
 
 ![](image/two-sided-test-slide.png){fig-align="center" width="100%"}
 
@@ -235,12 +226,11 @@ You can experiment with two-sided tests here:
 
 ## One Continuous Variable
 
--   Statistic: $\displaystyle t = \frac{\overline x - \mu}{s/\sqrt{n}}$ where 
-    - [$\overline x$ is the sample mean,]{style="font-size:smaller;"}
-    - [$s$ is the sample standard deviation,]{style="font-size:smaller"} 
-    - [$\mu$ is the hypothesized mean, and]{style="font-size:smaller"}
-    - [$n$ is the sample size]{style="font-size:smaller"}
-
+-   Statistic: $\displaystyle t = \frac{\overline x - \mu}{s/\sqrt{n}}$ where
+    -   [$\overline x$ is the sample mean,]{style="font-size:smaller;"}
+    -   [$s$ is the sample standard deviation,]{style="font-size:smaller"}
+    -   [$\mu$ is the hypothesized mean, and]{style="font-size:smaller"}
+    -   [$n$ is the sample size]{style="font-size:smaller"}
 -   Simulation method: none
 -   Theoretical distribution: $t$ with $n-1$ degrees of freedom
 
@@ -256,15 +246,14 @@ You can experiment with two-sided tests here:
 
 -   Simulation method: shuffle group labels
 
--   Theoretical distribution: $t$    
-(degrees of freedom are a bit complicated)
+-   Theoretical distribution: $t$\
+    (degrees of freedom are a bit complicated)
 
 [[https://shiny.srvanderplas.com/APL/]{.emph}](https://shiny.srvanderplas.com/APL) and click on "Categorical + Continuous Variables"
 
 ## Two-group Tests
 
 ![A two-sample experiment randomly divides up a sample of experimental units into two groups and calculates the sample mean for each group.](image/unpaired-test-1.png)
-
 
 ## Two-group Tests
 
@@ -374,4 +363,3 @@ The F-value is the statistic, and is compared to an F(df1, df2) distribution - i
 -   Simulation method: shuffle values of $y$ relative to $x$
 
 -   Theoretical distribution: $t_{n-2}$, where $n$ is the number of observations
-
