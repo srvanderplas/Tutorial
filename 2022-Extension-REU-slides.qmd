@@ -100,9 +100,9 @@ Statistical evaluation
 
 Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.com/APL) and start with the Tea Tasting tab.
 
--   What effect does the number of simulations have on the results?
+-   What effect does the \# simulations have on the results?
 
--   What effect does the number of test cups have on the results?
+-   What effect does the \# test cups have on the results?
 
     -   [Assuming the number of observed cups is the same as the number of test cups]{style="font-size:smaller;"}
     -   [Assuming the number of observed cups is less than the number of test cups]{style="font-size:smaller;"}
