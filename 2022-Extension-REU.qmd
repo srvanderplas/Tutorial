@@ -55,8 +55,7 @@ If the results we observed are due to random chance alone, how common would it b
 
 2.  Record the number of successful selections
 
-3.  Repeat 100 times to generate a distribution of results under the null hypothesis -- that is, what our results would look like if the lady is just guessing.\
-    Note: in a classroom setting, you can have each person generate several data points using actual coin flips to get this distribution.
+3.  Repeat 100 times to generate a distribution of results under the null hypothesis -- that is, what our results would look like if the lady is just guessing.
 
 ```{r, echo = F, out.width = "49.5%", fig.show = "hold", fig.cap = "Simulated results (left), and simulated results evaluated in light of our observed data.", fig.width = 5, fig.height = 4}
 set.seed(24094703)
@@ -73,6 +72,8 @@ ggplot(data = res, aes(x = x, fill = fill)) + geom_bar() +
   ggtitle("Results of Tea Test Under Random Chance") + 
   theme(legend.position = c(1, 1), legend.justification = c(1,1), legend.background = element_rect(fill = "transparent", color = "black"))
 ```
+
+You can play with different configurations of the tea tasting scenario [here](https://srvanderplas.shinyapps.io/UNL-APL-workshop/) or [here](https://shiny.srvanderplas.com/APL/) (two links to different servers hosting the same application).
 
 ### Strength of the Evidence
 
@@ -97,6 +98,8 @@ No matter what distribution the researcher uses to compare to, the basic idea of
 In theory-based tests, this evidence is usually in the form of **a \_\_-value**, where the blank is the name of the distribution (commonly, $z$, $t$, $F$, $\chi^2$).
 
 ![The same process used in simulated distributions works in theory-based distributions.](image/Stat_test_logic.png)
+
+You can play with different simulations and distributions [here](https://srvanderplas.shinyapps.io/UNL-APL-workshop/) or [here](https://shiny.srvanderplas.com/APL/) (two links to different servers hosting the same application). Use the Distributions tab.
 
 ### Understanding p-values
 
@@ -140,9 +143,13 @@ In these tests, our **null hypothesis** is that $\pi = a$, where a is chosen rel
 
 When simulating these experiments, we will often use a coin flip (for random chance) or a spinner (for other values of $\pi$) to generate data.
 
+You can play with different one sample categorical tests [here](https://srvanderplas.shinyapps.io/UNL-APL-workshop/) or [here](https://shiny.srvanderplas.com/APL/) (two links to different servers hosting the same application). Use the One Categorical Variable tab.
+
 #### Continuous Variables
 
 One-sample continuous variable experiments cannot be simulated because we do not usually know the characteristics of the population we're trying to predict from. Instead, we use theory-based tests for continuous one-sample data.
+
+You can play with different one sample continuous tests [here](https://srvanderplas.shinyapps.io/UNL-APL-workshop/) or [here](https://shiny.srvanderplas.com/APL/) (two links to different servers hosting the same application). Use the One Continuous Variable tab.
 
 <!-- Two sample test example -->
 
@@ -151,6 +158,8 @@ One-sample continuous variable experiments cannot be simulated because we do not
 In a two-sample test, there are two groups of participants which are assigned different treatments. The goal is to see how the two treatments differ. Because there are two groups, the mathematical formula for calculating the standardized statistic is slightly more complicated (because the variability of $\overline{X}_A - \overline{X}_B$ is a bit more complicated), but in the end that statistic is compared to a similar reference distribution.
 
 ![A two-sample test randomly divides up a sample into two groups and calculates the sample mean for each group.](image/unpaired-test.png) <!-- Paired vs unpaired tests -->
+
+You can play with different two sample categorical tests [here](https://srvanderplas.shinyapps.io/UNL-APL-workshop/) or [here](https://shiny.srvanderplas.com/APL/) (two links to different servers hosting the same application). Use the Categorical + Continuous Variable tab.
 
 ### Matched Pairs and Repeated Measures
 
@@ -163,6 +172,8 @@ A repeated measures study requires each participant to experience both treatment
 Sometimes, it is not ethical or feasible to give the same individual both treatments -- for instance, we cannot ethically or logistically assign mothers to breastfeed or formula feed with the same baby -- and so instead, we must create pairs of individuals who are similar.
 
 ![In a matched pairs study, we use covariates to match individuals and then assign each individual in a pair to a single treatment. Matched pairs studies reduce variability, but not as much as repeated measures studies](image/matched-pairs.png)
+
+You can play with different matched-pairs and repeated-measures studies [here](https://srvanderplas.shinyapps.io/UNL-APL-workshop/) or [here](https://shiny.srvanderplas.com/APL/) (two links to different servers hosting the same application). Use the One Continuous Variable tab, and the difference between your matched pairs or repeated measures as your observation.
 
 ### Analysis of Variance
 
