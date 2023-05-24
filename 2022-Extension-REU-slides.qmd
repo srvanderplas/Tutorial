@@ -11,6 +11,7 @@ editor: visual
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+# remotes::install_github("mitchelloharawild/icons")
 library(icons)
 ```
 
@@ -98,7 +99,7 @@ Statistical evaluation
 
 ## Try it out! {background-color="#c7c8ca"}
 
-Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.com/APL) and start with the Tea Tasting tab.
+Go to [<https://shiny.srvanderplas.com/APL>]{.emph} and start with the Tea Tasting tab.
 
 -   What effect does the \# simulations have on the results?
 
@@ -108,7 +109,7 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
     -   [Assuming the number of observed cups is less than the number of test cups]{style="font-size:smaller;"}
 
 ::: aside
-Another link to the same applet is [[https://srvanderplas.shinyapps.io/UNL-APL-workshop/]{.emph}](https://srvanderplas.shinyapps.io/UNL-APL-workshop/)
+Another link to the same applet is [<https://srvanderplas.shinyapps.io/UNL-APL-workshop/>]{.emph}
 :::
 
 ## Hypothesis Testing Logic {.smaller}
@@ -147,7 +148,7 @@ Another link to the same applet is [[https://srvanderplas.shinyapps.io/UNL-APL-w
 
 ## Try it out {.smaller background-color="#c7c8ca"}
 
-Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.com/APL) and start with the Distributions tab.
+Go to [<https://shiny.srvanderplas.com/APL>]{.emph} and start with the Distributions tab.
 
 -   What changes when you change distribution?
 
@@ -188,7 +189,7 @@ Go to [[https://shiny.srvanderplas.com/APL]{.emph}](https://shiny.srvanderplas.c
 
 You can experiment with two-sided tests here:
 
-[[https://shiny.srvanderplas.com/APL/]{.emph}](https://shiny.srvanderplas.com/APL) and click on "One Continuous Variable"
+[[https://shiny.srvanderplas.com/APL/](https://shiny.srvanderplas.com/APL)]{.emph} and click on "One Continuous Variable"
 
 ## Confidence Intervals
 
@@ -222,7 +223,7 @@ You can experiment with two-sided tests here:
 
 -   Theoretical distribution: Binomial
 
-[[https://shiny.srvanderplas.com/APL/]{.emph}](https://shiny.srvanderplas.com/APL) and click on "One Categorical Variable"
+[[https://shiny.srvanderplas.com/APL/](https://shiny.srvanderplas.com/APL)]{.emph} and click on "One Categorical Variable"
 
 ## One Continuous Variable
 
@@ -234,7 +235,7 @@ You can experiment with two-sided tests here:
 -   Simulation method: none
 -   Theoretical distribution: $t$ with $n-1$ degrees of freedom
 
-[[https://shiny.srvanderplas.com/APL/]{.emph}](https://shiny.srvanderplas.com/APL) and click on "One Continuous Variable"
+[[https://shiny.srvanderplas.com/APL/](https://shiny.srvanderplas.com/APL)]{.emph} and click on "One Continuous Variable"
 
 ## Two-group Tests
 
@@ -249,7 +250,7 @@ You can experiment with two-sided tests here:
 -   Theoretical distribution: $t$\
     (degrees of freedom are a bit complicated)
 
-[[https://shiny.srvanderplas.com/APL/]{.emph}](https://shiny.srvanderplas.com/APL) and click on "Categorical + Continuous Variables"
+[[https://shiny.srvanderplas.com/APL/](https://shiny.srvanderplas.com/APL)]{.emph} and click on "Categorical + Continuous Variables"
 
 ## Two-group Tests
 
