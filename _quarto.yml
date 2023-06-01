@@ -1,7 +1,10 @@
 project:
   type: website
   output-dir: docs
-
+  
+execute:
+  freeze: auto  # re-render only when source changes
+  
 website:
   title: "Tutorials"
   navbar:
@@ -9,8 +12,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: extension.qmd
-        text: Extension
+      - sidebar:graphics
       - sidebar:extension
         
   sidebar:
@@ -20,8 +22,19 @@ website:
       background: light
       collapse-level: 2
       contents: 
+        - extension.qmd
         - 2022-Extension-REU.qmd
         - 2022-Extension-REU-slides.qmd
+    - id: graphics
+      title: "Graphics"
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents: 
+        - graphics.qmd
+        - text: "Creating Good Charts"
+          file: 2023-REU.qmd
+
 format:
   html:
     theme: cosmo

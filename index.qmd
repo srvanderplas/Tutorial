@@ -6,5 +6,5 @@ This github project contains links to various tutorials I have created that aren
 
 [2023 REU - Creating Good Charts](2023-REU.html) [(pdf)](2023-REU.pdf)
 
-[2022 Extension REU Statistics Primer](2022-Extension-REU.html) and [slides](2022-Extension-REU-slides.html)
+[2022 Extension REU - Statistics with Cartoons](2022-Extension-REU.html) and [slides](2022-Extension-REU-slides.html)
 

@@ -1,0 +1,11 @@
+---
+title: "Graphics Projects"
+---
+
+
+- [2023 REU - Creating Good Charts](2023-REU.html) [(pdf)](2023-REU.pdf)
+
+
+# Other links
+
+- [Statistical Computing with R and Python](https://srvanderplas.github.io/stat-computing-r-python)
