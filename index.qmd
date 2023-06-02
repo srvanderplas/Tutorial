@@ -1,8 +1,10 @@
 ---
-title: "Tutorials"
+title: "Teaching Materials"
 ---
 
-This github project contains links to various tutorials I have created that aren't big enough to justify their own book/separate website.
+This github project contains links to various teaching materials I have created and presented that aren't big enough to justify their own book/separate website.
+
+[Hands-on (Shoes-off) Probability](Forensics/random-match-prob.qmd) - An introduction to probability in forensics with shoe prints.
 
 [2023 REU - Creating Good Charts](2023-REU.html) [(pdf)](2023-REU.pdf)
 

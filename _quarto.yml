@@ -6,12 +6,14 @@ execute:
   freeze: auto  # re-render only when source changes
   
 website:
-  title: "Tutorials"
+  title: "Teaching Materials"
   navbar:
     background: primary
     left:
       - href: index.qmd
         text: Home
+      - href: Forensics/random-match-prob.qmd
+        text: Forensics
       - sidebar:graphics
       - sidebar:extension
         
@@ -34,6 +36,7 @@ website:
         - graphics.qmd
         - text: "Creating Good Charts"
           file: Graphics/2023-REU.qmd
+
 
 format:
   html:
