@@ -1,0 +1,494 @@
+---
+title: "Creating Good Graphics"
+from: markdown+emoji
+format:
+    html: 
+      self-contained: true
+    pdf: default
+    docx: default
+bibliography: 2023-REU-refs.bib
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+# Identifying the problem
+
+Let's start out by looking at some examples of less-than-effective charts.
+
+## Example 1: Pie Chart Poll Results
+
+See if you can spot the problem with this one, published in the March 16, 2021 Scottsbluff, NE Star Herald [@wtfviz21].
+
+::: columns
+::: {.column width="40%"}
+![Scottsbluff Star Herald Reader poll.](../image/starherald_marijuana.png){#fig-neb-mj fig-alt="A newspaper clipping from the Scottsbluff Star-Herald, showing a pie chart of support for the marijuana legalization inititive in Nebraska, from Tuesday, March 16, 2021. The yes slice (which seems to be about 56% of the area) is labeled 44%, while the no slice (which seems to be about 44% of the area) is labeled 56%."}
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+Discuss:
+
+-   What is wrong with this chart?
+
+-   Do you think it might be misleading?
+    If so, how?
+
+-   Do you think the mistakes were intentional?
+:::
+:::
+
+## Example 2: High Support
+
+While I didn't intend this section to have a theme, here's another chart on a similar topic from CBS News [@wtfviz22].
+
+![High support.](../image/americans_marijuana.jpg){#fig-cbs-mj fig-alt="A CBS News pie chart of americans who have tried marijuana, showing 51% today, 43% last year, and 34% in 1997. The chyron below the image says 'High support for legalizing marijuana. More than half of Americans say they've tried pot'"}
+
+Discuss:
+
+-   What is wrong with this chart?
+
+-   What would you change to more accurately represent the data?
+
+-   Do you think the mistakes were intentional?
+
+## Example 3: Gas Prices
+
+Pie charts aren't the only chart type that commonly are presented wrong.
+Here's a bar chart that generated a lot of conversation online, from @expresswebdesk18.
+
+![Gas and Diesel price changes in India (2004 - 2018).](../image/bjp-gas-price.jpg){#fig-gas-india fig-alt="Two bar charts showing the % increase in petrol and diesel prices in India (2018). The first chart shows an increase of 20.5% from 2004 to 2009 (real values of 33.71 to 40.62), an increase of 75.0% from 2009 to 2014 (real values of 40.62 to 71.41), and a 13% decrease from 2014 to 2018 (real values of 71.41 to 80.73). The last bar and arrow are shown in yellow, while the first three bars are shown in green. The second chart shows diesel prices, with real values of 21.74, 30.86, 56.71, and 72.83 in 2004, 2009, 2014, and 2018, respectively. Arrows show the change between each price set, with a 42% increase from 2004 to 2009, an 83.7% increase from 2009 to 2014, and a 28% decrease from 2014 to 2018, which is highlighted in yellow. At the bottom of each chart, an image of Narendra Modi is shown."}
+
+Discuss:
+
+-   What is wrong with this?
+
+-   What design choices contribute to the problems?
+
+-   Do you think this was intentionally designed to be misleading?
+    Why or why not?
+
+## Example 4: Information Overload
+
+Not all charts are intentionally designed to be misleading.
+Sometimes, the desire to show all of the data goes awry.
+Here is an attempt to show 6 variables using three location variables, color, column length, and column width [@pies13].
+The original source doesn't specify what variables are plotted, so analyze this based on its' form, rather than the data it shows.
+
+![](../image/3d-stacked-pie-chart.png){#fig-stacked-pie}
+
+Discuss:
+
+-   What problems do you have reading this chart?
+
+-   Can you compare the quantities of all 6 variables shown?
+    Why or why not?
+
+(Yes, the blog this chart is taken from is satirical. This is *not* a recommended graphical form.)
+
+These are some of my favorite examples, but of course, there are also bad charts in the scientific literature [@broman18].
+The goal of this module is to ensure that as you work on research, you will create effective graphics that are accessible and well-designed.
+
+# Designing Good Charts
+
+## Why Graphics Matter
+
+Graphics are a form of **external cognition** that allow us to think about the *data* rather than the *chart*.
+
+That is, graphics are a tool to make it easier for us to think about what the data means.
+
+Good graphics take advantage of how the brain works, leveraging
+
+-   preattentive processing
+
+-   perceptual grouping
+
+-   awareness of visual limitations
+
+Good graphics also depend on the data: the chart type should be chosen based on the types of variables you want to display, the amount of data you have, and the results you want to highlight.
+
+### Example: Hertzsprung Russell Diagram
+
+Our first example of a good chart is the Hertzsprung-Russell Diagram [@wikipediacontributors23b].
+
+```{r HR-diagram}
+#| fig-width: 8
+#| fig-height: 5
+#| out-width: "100%"
+#| message: false
+#| warning: false
+#| echo: false
+#| fig-cap: "The Hertzsprung Russell diagram. Discovered independently by Ejnar Hertzsprung (1873–1967) and Henry Norris Russell (1877–1957). The diagram plots the color index of the star against the brightness (absolute magnitude) of the star. As a result, it is possible to discern that these two variables are related and change together over a star's life cycle: a hypothesis that only came to be because of this chart."
+#| fig-alt: "A scatter plot showing the color index of a star on the x-axis and the absolute magnitude (brightness) of the star on the y-axis. Points are colored by spectral class, which varies from blue to white to yellow to red as the color index increases and the star's temperature decreases. Points are primarily located along a downward-sloping line from the top left to the bottom right, which is labeled the 'main sequence'. There is another set of points which diverges from the main sequence and extends out horizontally in the middle of the graph; these are labeled 'giants', and a few outliers that are above the giant cluster are labeled 'supergiants'. Below the main sequence stars, there are outliers which are labeled 'dwarfs'."
+#| fig-dpi: 300
+if (!file.exists("../data/stars.csv")) download.file("https://github.com/astronexus/HYG-Database/raw/master/hyg/v3/hyg_v35.csv", destfile = "../data/stars.csv")
+library(magrittr)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+stars <- readr::read_csv("../data/stars.csv")
+
+stars <- stars %>%
+  mutate(Spectral.Class = str_extract(spect, "^.") %>%
+           str_to_upper() %>%
+           factor(levels = c("O", "B", "A", "F", "G", "K", "M"), ordered = T),
+         EarlyLate = str_extract(spect, ".(\\d)") %>%
+           str_replace_all("[^\\d]", "") %>% as.numeric(),
+         Temp = 4600*(1/(.92*ci + 1.7) + 1/(.92*ci) + 0.62)) %>%
+  filter(!is.na(Spectral.Class) & !is.na(EarlyLate) & !is.na(hip)) %>%
+  arrange(Spectral.Class, EarlyLate) %>%
+  mutate(SpectralClass2 = paste0(Spectral.Class, EarlyLate) %>% factor(., levels = unique(.)))
+
+ggplot(data = filter(stars, dist < 500)) + 
+  # annotate(x = -.25, xend = .75, y = -2, yend = -6.5, arrow = arrow(ends = "both", length = unit(.1, "cm")), geom = "segment", color = "grey") + 
+  annotate(x = 0.125, xend = 2, y = 4.25, yend = 4.25, arrow = arrow(ends = "both", length = unit(.1, "cm")), geom = "segment", color = "grey") + 
+  geom_point(aes(x = ci, y = -absmag, color = Spectral.Class), alpha = .3) + 
+  scale_x_continuous("B-V Color Index", breaks = c(0, .5, 1, 1.5, 2), labels = c("Hot  0.0       ", "0.5", "1.0", "1.5", "           2.0  Cool")) + 
+  scale_y_continuous("Absolute Magnitude (Brightness)", breaks = c(-8, -4, 0, 4), labels = c(8, 4, 0, -4)) + 
+  scale_color_manual("Spectral\nClass", values = c("#2E478C", "#426DB9", "#B5D7E3", "white", "#FAF685", "#E79027", "#DA281F")) + 
+  annotate(x = .25, y = -5.5, label = "Dwarfs", geom = "text", angle = -25, color = "white") + 
+  annotate(x = .5, y = -3.75, label = "Main Sequence", geom = "text", angle = -28) + 
+  annotate(x = 1.125, y = 0, label = "Giants", geom = "text") + 
+  annotate(x = 1, y = 4.5, label = "Supergiants", geom = "text", color = "white") +
+  theme(panel.background = element_rect(fill = "#000000"),
+        legend.key = element_blank(), 
+        panel.grid = element_line(colour = "grey40"),
+        axis.text = element_text(color = "white"),
+        text = element_text(size = 18, color = "white"), 
+        legend.background = element_rect(fill = "#000000"),
+        plot.background = element_rect(fill = "#000000")) + 
+  ggtitle("Hertzsprung-Russell Diagram") + 
+  coord_cartesian(xlim = c(-.25, 2.25), ylim = c(-12, 7)) + 
+  guides(color = guide_legend(override.aes = list(alpha = 1)))
+```
+
+John Tukey, a famous statistician often considered the father of statistical graphics, wrote in Exploratory Data Analysis (1977):
+
+> The greatest value of a picture is when it forces us to notice what we never expected to see.
+
+This chart is an excellent example of the value that good graphics create in research: they can help us understand our data in a new way, leading to innovations and new research directions.
+
+Discuss:
+
+-   What variables are mapped to the following chart dimensions?
+
+    -   X location
+    -   Y location
+    -   color
+
+-   What other information is present on the chart that is not specifically a data value?
+
+-   What does this chart do well?
+
+-   What design features "work"?
+
+-   What don't you like?
+
+I've used data from the [HYG Database](https://github.com/astronexus/HYG-Database) to generate this chart.
+Only stars within 500 AU are shown.
+
+## Perceptual Principles
+
+### Preattentive Perception
+
+-   Occurs automatically (no effort)
+
+-   Color, shape, angle
+
+-   Combinations of preattentive features require attention
+
+    -   Double-encoding (using multiple features for the same variable) is ok
+
+```{r preattentive1}
+#| echo: false
+#| fig-width: 4
+#| fig-height: 4
+#| label: fig-preattentive1
+#| fig-cap: "Two scatterplots with one point that is different. Can you easily spot the different point?"
+#| fig-subcap: 
+#|   - "Shape"
+#|   - "Color"
+#| layout-ncol: 2
+
+set.seed(153253)
+data <- data.frame(expand.grid(x=1:6, y=1:6), color=sample(c(1,2), 36, replace=TRUE))
+data$x <- data$x+rnorm(36, 0, .25)
+data$y <- data$y+rnorm(36, 0, .25)
+suppressWarnings(library(ggplot2))
+new_theme_empty <- theme_bw()
+new_theme_empty$line <- element_blank()
+# new_theme_empty$rect <- element_blank()
+new_theme_empty$strip.text <- element_blank()
+new_theme_empty$axis.text <- element_blank()
+new_theme_empty$plot.title <- element_blank()
+new_theme_empty$axis.title <- element_blank()
+# new_theme_empty$plot.margin <- structure(c(0, 0, -1, -1), unit = "lines", valid.unit = 3L, class = "unit")
+
+data$shape <- c(rep(2, 15), 1, rep(2,20))
+library(scales)
+ggplot(data=data, aes(x=x, y=y, color=factor(1, levels=c(1,2)), shape=factor(shape), size=I(5))) + 
+  geom_point() +
+  scale_shape_manual(guide="none", values=c(19, 15)) + 
+  scale_color_discrete(guide="none") + 
+  new_theme_empty
+
+data$shape <- c(rep(2, 25), 1, rep(2,10))
+ggplot(data=data, aes(x=x, y=y, color=factor(shape), shape=I(19), size=I(5)))+
+  geom_point() +  
+  scale_color_discrete(guide="none") + 
+  new_theme_empty
+```
+
+```{r preattentive2}
+#| echo: false
+#| fig-width: 4
+#| fig-height: 4
+#| label: fig-preattentive2
+#| fig-cap: "Two scatterplots. Can you easily spot the different point(s)?"
+#| fig-subcap: 
+#|   - "Shape and Color (dual encoded)"
+#|   - "Shape and Color (different variables)"
+#| layout-ncol: 2
+set.seed(1532534)
+data <- data.frame(expand.grid(x=1:6, y=1:6), color=sample(c(1,2), 36, replace=TRUE))
+data$x <- data$x+rnorm(36, 0, .25)
+data$y <- data$y+rnorm(36, 0, .25)
+suppressWarnings(library(ggplot2))
+new_theme_empty <- theme_bw()
+new_theme_empty$line <- element_blank()
+# new_theme_empty$rect <- element_blank()
+new_theme_empty$strip.text <- element_blank()
+new_theme_empty$axis.text <- element_blank()
+new_theme_empty$plot.title <- element_blank()
+new_theme_empty$axis.title <- element_blank()
+# new_theme_empty$plot.margin <- structure(c(0, 0, -1, -1), unit = "lines", valid.unit = 3L, class = "unit")
+
+data$shape <- data$color
+ggplot(data=data, aes(x=x, y=y, 
+                      color=factor(color), 
+                      shape=factor(shape))) + 
+  geom_point(size = 5) +
+  scale_shape_manual(guide="none", values=c(19, 15)) +
+  scale_color_discrete(guide="none") + 
+  new_theme_empty
+
+data <- data %>%
+  mutate(sample = row_number() %in% sample(1:n(), 4)) %>%
+  mutate(shape = if_else(sample, if_else(shape == 1, 2, 1), shape))
+
+ggplot(data=data, aes(x=x, y=y, 
+                      color=factor(color), 
+                      shape=factor(shape))) + 
+  geom_point(size = 5) +
+  scale_shape_manual(guide="none", values=c(19, 15)) +
+  scale_color_discrete(guide="none") + 
+  new_theme_empty
+# qplot(data=data, x=x, y=y, color=factor(color), shape=factor(shape), size=I(5))+scale_shape_manual(guide="none", values=c(19, 15)) + scale_color_discrete(guide="none") + new_theme_empty
+```
+
+### Perceptual Grouping
+
+Perception is interesting, because when faced with ambiguous images, we can learn something about how our brains work.
+
+::: {layout="[[55,-10,35]]"}
+![Is this a rabbit or a duck?](../image/rabbitduck.png){#fig-rabbitduck fig-alt="A picture laid out on an x-y coordinate axis. The y-axis is labeled 'Rabbit' and the x-axis is labeled 'Duck'. When viewed with the rabbit axis at the bottom, the image looks like a rabbit with tall ears; when viewed with the duck axis at the bottom, the image looks like a duck, where the ears become the bill."}
+
+![What do you see in this image?](../image/IllusoryContour.png){#fig-illusory fig-alt="A complex figure that appears to be made up of a black outline of a triangle, three circles laid out to form the points of an inverted triangle, and a white triangle overlaid on top of the three dots. In practice, what actually exists is a set of three angles at 0, 120, and 240 degrees, and a set of three pac-man shapes (circles with a pie slice taken out) at 60, 180, and 300 degrees."}
+:::
+
+In @fig-rabbitduck, the image is ambiguous, and depending on what orientation we use, the figure can be either a rabbit or a duck.
+That is, the same image can be interpreted in two different ways, depending on the contextual information we have.
+
+How do you describe the components of @fig-illusory?
+Something like "Three circles, a black triangle outline, and a white triangle over top?" The components of @fig-illusory are 3 pac-man shapes and 3 angles - that's what's actually there.
+The appearance of triangles and depth information is a construction that occurs within the brain.
+
+Our brains use past experience to simplify the visual input from the world.
+It's much easier to describe @fig-illusory if you see triangles and circles rather than angles and pac-men shapes.
+
+The perceptual rules that describe how we make sense of the world are the **Gestalt laws**, but the general principle is that the whole is more than the sum of the parts - as in @fig-illusory, the brain constructs meaning from individual pieces that, when combined, produce greater meaning - for example, a white triangle, a black triangle outline, and 3 circles.
+
+![](../image/gestalt.jpg){fig-alt="An image reading 'GESTALT', where each letter demonstrates a principle of gestalt grouping. G has a white stripe over it, demonstrating closure - the stripe and the G are perceived as separate objects. E is shown as a grid of black squares, with grey squares making up the background; this demonstrates proximity - small objects close together are perceived as being part of the same whole. A bar is woven through the S shape, showing good continuation - the S is perceived as a continuous object that is behind the bar in the middle portion. The two Ts are striped and indicate similarity - they are similarly shaped and patterned and can be perceived as a group. The AL are connected, and the inside of the A seems to have a white tree in the middle, demonstrating figure/ground. The final T is part of the similarity group."}
+
+You can read about the gestalt rules [here](https://en.wikipedia.org/wiki/Principles_of_grouping) [@wikipediacontributors23d], but they are also demonstrated in the figure above.
+
+In graphics, we can leverage the gestalt principles of grouping to create order and meaning.
+If we color points by another variable, we are creating groups of similar points which assist with the perception of groups instead of individual observations.
+If we add a trend line, we create the perception that the points are moving "with" the line (in most cases), or occasionally, that the line is dividing up two groups of points.
+Depending on what features of the data you wish to emphasize, you might choose different aesthetics mappings, facet variables, and factor orders.
+
+::: callout
+Suppose I want to emphasize the change in the murder rate between 1980 and 2010.
+
+I could use a bar chart (showing only the first 4 states alphabetically for space), a line chart (showing one line per state), or a box plot (showing variability over time).
+
+::: panel-tabset
+#### R {.unnumbered}
+
+```{r chart-emphasis-r}
+#| label: chart-emphasis-r
+#| fig-width: 6
+#| fig-height: 4
+#| fig-cap: "Three versions of the same data that emphasize different aspects of the dataset."
+#| fig-subcap: 
+#|   - "Bar chart, showing 4 states"
+#|   - "Line chart, with one state per line"
+#|   - "Box plot by year"
+#| layout-nrow: 3
+#| layout-ncol: 1
+
+fbiwide <- read.csv("https://github.com/srvanderplas/Stat151/raw/main/data/fbiwide.csv")
+library(dplyr)
+library(ggplot2)
+
+fbiwide %>%
+  filter(Year %in% c(1980, 2010)) %>%
+  filter(State %in% c("Alabama", "Alaska", "Arizona", "Arkansas")) %>%
+  ggplot(aes(x = State, y = Murder/Population*100000, fill = factor(Year))) +
+  geom_col(position = "dodge") +
+  coord_flip() +
+  ylab("Murders per 100,000 residents")
+
+fbiwide %>%
+  filter(Year %in% c(1980, 2010)) %>%
+  ggplot(aes(x = Year, y = Murder/Population*100000, group = State)) +
+  geom_line() +
+  ylab("Murders per 100,000 residents")
+
+fbiwide %>%
+  filter(Year %in% c(1980, 2010)) %>%
+  ggplot(aes(x = factor(Year), y = Murder/Population*100000)) +
+  geom_boxplot() +
+  ylab("Murders per 100,000 residents")
+
+```
+
+#### Python {.unnumbered}
+
+```{python chart-emphasis-py, fig.height = 4, fig.width = 6}
+#| label: chart-emphasis-py
+#| fig-width: 6
+#| fig-height: 4
+#| fig-cap: "Three versions of the same data that emphasize different aspects of the dataset."
+#| fig-subcap: 
+#|   - "Bar chart, showing 4 states"
+#|   - "Line chart, with one state per line"
+#|   - "Box plot by year"
+#| layout-nrow: 3
+#| layout-ncol: 1
+import pandas as pd
+from plotnine import *
+
+fbiwide = r.fbiwide
+fbiwide = fbiwide.assign(YearFactor = pd.Categorical(fbiwide.Year))
+fbiwide = fbiwide.assign(Murder100k = fbiwide.Murder/fbiwide.Population * 100000)
+
+yr1980_2010 = fbiwide[fbiwide.Year.isin([1980,2010])]
+yr1980_2010 = yr1980_2010.assign(YearFactor = pd.Categorical(yr1980_2010.Year))
+subdata = yr1980_2010[yr1980_2010.State.isin(["Alabama", "Alaska", "Arizona", "Arkansas"])]
+
+(
+ggplot(subdata, aes(x = "State", y = "Murder100k", fill = "YearFactor")) +
+  geom_col(stat='identity', position = "dodge") +
+  coord_flip() +
+  ylab("Murders per 100,000 residents")
+)
+
+(
+ggplot(yr1980_2010, aes(x = "Year", y = "Murder100k", group = "State")) +
+  geom_line() +
+  ylab("Murders per 100,000 residents")
+)
+
+(
+ggplot(yr1980_2010, aes(x = "YearFactor", y = "Murder100k")) +
+  geom_boxplot() +
+  ylab("Murders per 100,000 residents")
+)
+
+```
+:::
+:::
+
+Which one best demonstrates that in every state and region, the murder rate decreased?
+
+## Perceptual and Visual Limitations
+
+Our perceptual system is not infallible, and some people have additional challenges to work with.
+
+### Color
+
+About 10% of the XY population and 0.2% of the XX population has some form of colorblindness or color deficiency.
+
+Here are some basic tips for choosing color schemes for your charts.
+
+-   Do not use rainbow color gradient schemes
+
+    -   because of the unequal perception of different wavelengths, these schemes are *misleading* - the color distance does not match the perceptual distance.
+
+-   Avoid any scheme that uses green-yellow-red signaling if you have a target audience that may include colorblind people.
+
+-   To "colorblind-proof" a graphic, you can use a couple of strategies:
+
+    -   double encoding - where you use color, use another aesthetic (line type, shape) as well to help your colorblind readers out
+    -   If you can print your chart out in black and white and still read it, it will be safe for colorblind users. This is the only foolproof way to do it!
+    -   If you are using a color gradient, use a monochromatic color scheme where possible. This is perceived as light -\> dark by colorblind people, so it will be correctly perceived no matter what color you use.
+    -   If you have a bidirectional scale (e.g. showing positive and negative values), the safest scheme to use is purple - white - orange. In any color scale that is multi-hue, it is important to transition through white, instead of from one color to another directly.
+
+-   Be conscious of what certain colors "mean"
+
+    -   Leveraging common associations can make it easier to read a color scale and remember what it stands for (e.g. blue for cold, orange/red for hot is a natural scale, red = Republican and blue = Democrat in the US, white -\> blue gradients for showing rainfall totals)
+    -   Some colors can can provoke emotional responses that may not be desirable.[^1]
+    -   It is also important to be conscious of the social baggage that certain color schemes may have - the pink/blue color scheme often used to denote gender can be unnecessarily polarizing, and it may be easier to use a colder color (blue or purple) for men and a warmer color (yellow, orange, lighter green) for women[^2].
+
+[^1]: When the COVID-19 outbreak started, many maps were using white-to-red gradients to show case counts and/or deaths.
+    [The emotional association between red and blood, danger, and death may have caused people to become more frightened than what was reasonable given the available information.](https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/)
+
+[^2]: Lisa Charlotte Rost.
+    [What to consider when choosing colors for data visualization.](https://www.dataquest.io/blog/what-to-consider-when-choosing-colors-for-data-visualization/)
+
+### Working Memory
+
+We can hold about 7 items in "working memory" and maintain these by rehearsing the content.
+As a result, using a legend with more than 7 items will create additional cognitive load on those viewing the visualizations.
+Wherever possible, keep cognitive limitations in mind
+
+### Alt Text and Accessibility
+
+Some individuals may have limited vision or visual processing ability.
+To make your charts accessible, you should always provide [alt-text](https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81) for your graphics.
+
+It can also help to use larger text size and/or fonts that are easier to read for individuals with e.g. [dyslexia](https://opendyslexic.org/) [@zorzi_etal12].
+You can customize your charts to make these changes, though instructions will vary based on which plotting system you are using.
+
+# Chart Types
+
+-   Graph Galleries
+    -   [Python](https://www.python-graph-gallery.com/)
+    -   [R](https://r-graph-gallery.com/)
+    -   [D3.JS](https://d3-graph-gallery.com/)
+    -   [Matlab](https://www.mathworks.com/products/matlab/plot-gallery.html)
+    -   [SAS](https://support.sas.com/en/knowledge-base/graph-samples-gallery.html)
+    -   [Stata](https://surveydesign.com.au/stata/graphs.html)
+    -   [Excel](https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90) :grimacing:
+
+Choose your chart type based on your data types as well as what you want to show:
+
+- If you have continuous data to show in X and Y, a scatterplot is a great idea. 
+- If you have categorical data in X and continuous data in Y, you may want to consider a boxplot, violin plot, or jittered scatterplot. 
+- If you have too much data in X and Y for a scatterplot, or you have a lot of categories in X or Y and continuous data in the other axis, you might try binning the continuous variable to create a heatmap.
+
+
+# Learn More
+
+- Statistical Computing in R and Python chapters:
+    - [Data Visualization Basics](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02-basic-data-vis.html)
+    - [Exploratory Data Analysis](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02a-eda.html)
+    - [Data Visualization](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html)
+    - [Creating Good Charts](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02c-good-graphics.html)
+
+
+
+# References

@@ -23,8 +23,8 @@ website:
       collapse-level: 2
       contents: 
         - extension.qmd
-        - 2022-Extension-REU.qmd
-        - 2022-Extension-REU-slides.qmd
+        - Extension/2022-Extension-REU.qmd
+        - Extension/2022-Extension-REU-slides.qmd
     - id: graphics
       title: "Graphics"
       style: "docked"
@@ -33,7 +33,7 @@ website:
       contents: 
         - graphics.qmd
         - text: "Creating Good Charts"
-          file: 2023-REU.qmd
+          file: Graphics/2023-REU.qmd
 
 format:
   html:
