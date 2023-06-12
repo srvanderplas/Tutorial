@@ -39,8 +39,11 @@ website:
 
 
 format:
-  html:
-    theme: cosmo
+  html:   
+    highlight-style: a11y
+    theme:
+      light: flatly
+      dark: darkly
     css: styles.css
     toc: true
 
