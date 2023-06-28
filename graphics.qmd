@@ -3,7 +3,7 @@ title: "Graphics Projects"
 ---
 
 
-- [2023 REU - Creating Good Charts](Graphics/2023-REU.html) [(pdf)](Graphics/2023-REU.pdf)
+- [2023 REU - Creating Good Charts](Graphics/2023-REU.qmd) [(slides)](Graphics/2023-REU-slides.qmd)
 
 
 # Other links

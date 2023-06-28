@@ -6,7 +6,7 @@ This github project contains links to various teaching materials I have created 
 
 [Hands-on (Shoes-off) Probability](Forensics/random-match-prob.qmd) - An introduction to probability in forensics with shoe prints.
 
-[2023 REU - Creating Good Charts](2023-REU.html) [(pdf)](2023-REU.pdf)
+[2023 REU - Creating Good Charts](Graphics/2023-REU.html) [(pdf)](Graphics/2023-REU.pdf)
 
 [2022 Extension REU - Statistics with Cartoons](2022-Extension-REU.html) and [slides](2022-Extension-REU-slides.html)
 

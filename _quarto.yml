@@ -36,6 +36,8 @@ website:
         - graphics.qmd
         - text: "Creating Good Charts"
           file: Graphics/2023-REU.qmd
+        - text: "Creating Good Charts (Slides)"
+          file: Graphics/2023-REU-slides.qmd
 
 
 format:

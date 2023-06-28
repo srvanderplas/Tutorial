@@ -1,10 +1,31 @@
 [
   {
+    "objectID": "Forensics/random-match-prob.html",
+    "href": "Forensics/random-match-prob.html",
+    "title": "Hands-on (Shoes-off) Probability",
+    "section": "",
+    "text": "Suppose you are a forensic examiner.\n\nYou’ve been given a crime-scene print as well as a suspect’s shoe, which you have used to make a print comparable to the one found at the crime scene. The images are shown in Figure 1.\n\n\n\n\n\n\n\n(a) Print of the suspect’s shoe\n\n\n\n\n\n\n\n(b) Crime Scene Print\n\n\n\n\nFigure 1: Evidence specific to the case in question\n\n\nCompare the features of the lab-made print and the crime-scene print.\nDo they look similar?\nAre there any differences?\n\nYou’ve determined that the two prints form a class characteristic match - they have sufficiently similar features that the suspect might have left the print at the crime scene, but it could also have been any other person wearing the same model of shoe. You are writing up your report, and you expect you will have to testify in court about whether the suspect did or did not commit the crime. To do this, you need some sort of way to determine how likely it is that a random person off the street is to have the same shoe as the one that left the print at the scene.\n\nConsider for a moment what you would say if the print and the suspect’s shoe had been of a different model, like the Converse Chuck Taylor All-Star shown in Figure 2.\n\n\n\nFigure 2: Converse Chuck Taylor sole\n\n\nThese shoes were first introduced in the 1960s and have had a relatively consistent design for 60 years. In addition, many different models of Converse shoes (and several knock-off brands) feature a similar sole pattern, which means it is not possible to determine what model of Converse made a specific print.\nThen, think about what you would say if the print and the suspect’s shoe had been from a shoe with a relatively uncommon pattern, such as the shoe sole shown in Figure 3.\n\n\n\nFigure 3: El Naturalista’s Nido boot sole. The site describes the sole as follows: “The storks nests, to which the same couples return year after year, somewhere to come back to, a stable home and the place where life begins after each laying, are the perfect inspiration for those who seek to return home every day have[sic] enjoyed a unique design and comfort.”\n\n\nIf your crime scene print had been from a Converse shoe, does that mean the suspect is more or less likely to be guilty than if the crime scene print had been from a El Naturalista Nido boot like the sole in Figure 3?\n\nDaydreaming over, you start back to your report writing. How do you characterize the types of shoes people wear in the population? What makes a shoe common or uncommon?"
+  },
+  {
+    "objectID": "Forensics/random-match-prob.html#materials",
+    "href": "Forensics/random-match-prob.html#materials",
+    "title": "Hands-on (Shoes-off) Probability",
+    "section": "Materials",
+    "text": "Materials\n\nCooking Spray\nChocolate Milk powder\nNote: Cocoa powder used for baking is not ideal for this project. You want something designed to stir into milk.\nWhite printer paper of a size appropriate to your participants’ feet.\n\n8.5” x 14” paper will accommodate most feet. Here is a template that you can use that includes a forensics ruler (Do not scale if you want the measurements to be accurate).\nIf you have a lot of tall men in your sample population, you may need to combine multiple sheets or use 11” x 17” paper.\n\n2 towels, puppy pads, or rolls of paper towels\nA cookie sheet large enough to hold your sheet of paper\n1-2 spoons\ntape (optional - to hang the prints up on the wall)\nA pan filled with about 1” of soapy water (optional - good if doing this indoors)"
+  },
+  {
+    "objectID": "Forensics/random-match-prob.html#directions",
+    "href": "Forensics/random-match-prob.html#directions",
+    "title": "Hands-on (Shoes-off) Probability",
+    "section": "Directions",
+    "text": "Directions\nPDF for classroom use\n\nTake off one shoe, hold it sole up, and (lightly) apply cooking spray to the sole.\nSet the shoe on the towel or pad and put it back on. Step/hop on the shoe once or twice to remove excess oil.\nStep (with your oiled shoe) onto the first sheet of paper, rolling heel-to-toe.\nStep (with your oiled shoe) onto the second sheet of paper, rolling heel-to-toe.\nStep into the pan of soapy water with the shoe that you oiled, then step onto the towel to dry your shoe off.\nLightly sprinkle about 1/4 tsp of chocolate milk powder onto each sheet of paper. Shake the sheet of paper to spread the powder around so that it adheres to the oil.\nUse the feature guide to identify different geometric features on your shoe print.\nCompare with other shoe prints - do any have similar features in similar locations?\nNote: This step may only work in groups of about 30 or more.\n\nThe Random Match Probability of a shoe is the number of similar prints divided by the total number of prints. \\[\\hat P_\\text{Random Match} = \\frac{\\# \\text{ similar prints}}{\\text{Total # prints}}\\]\nIf our sample is large enough and representative of the larger population, then our estimated random match probability might be close enough to the hypothetical random match probability in the population"
+  },
+  {
     "objectID": "graphics.html",
     "href": "graphics.html",
     "title": "Graphics Projects",
     "section": "",
-    "text": "2023 REU - Creating Good Charts (pdf)\n\n\nOther links\n\nStatistical Computing with R and Python"
+    "text": "2023 REU - Creating Good Charts (slides)\n\n\nOther links\n\nStatistical Computing with R and Python"
   },
   {
     "objectID": "extension.html",
@@ -12,69 +33,6 @@
     "title": "Extension Projects",
     "section": "",
     "text": "Adapted Primary Literature\nStatistics primer for high school teachers adapting scientific papers to use in high school courses.\n\nBook\nApplet\nSlides\n\n2022 REU\n\nMaterial\nSlides"
-  },
-  {
-    "objectID": "Graphics/2023-REU.html",
-    "href": "Graphics/2023-REU.html",
-    "title": "Creating Good Graphics",
-    "section": "",
-    "text": "Let’s start out by looking at some examples of less-than-effective charts.\n\n\nSee if you can spot the problem with this one, published in the March 16, 2021 Scottsbluff, NE Star Herald (wtfViz 2021).\n\n\n\n\n\nFigure 1: Scottsbluff Star Herald Reader poll.\n\n\n\n\n\nDiscuss:\n\nWhat is wrong with this chart?\nDo you think it might be misleading? If so, how?\nDo you think the mistakes were intentional?\n\n\n\n\n\n\nWhile I didn’t intend this section to have a theme, here’s another chart on a similar topic from CBS News (wtfViz 2022).\n\n\n\nFigure 2: High support.\n\n\nDiscuss:\n\nWhat is wrong with this chart?\nWhat would you change to more accurately represent the data?\nDo you think the mistakes were intentional?\n\n\n\n\nPie charts aren’t the only chart type that commonly are presented wrong. Here’s a bar chart that generated a lot of conversation online, from Express Web Desk (2018).\n\n\n\nFigure 3: Gas and Diesel price changes in India (2004 - 2018).\n\n\nDiscuss:\n\nWhat is wrong with this?\nWhat design choices contribute to the problems?\nDo you think this was intentionally designed to be misleading? Why or why not?\n\n\n\n\nNot all charts are intentionally designed to be misleading. Sometimes, the desire to show all of the data goes awry. Here is an attempt to show 6 variables using three location variables, color, column length, and column width (Pies 2013). The original source doesn’t specify what variables are plotted, so analyze this based on its’ form, rather than the data it shows.\n\nDiscuss:\n\nWhat problems do you have reading this chart?\nCan you compare the quantities of all 6 variables shown? Why or why not?\n\n(Yes, the blog this chart is taken from is satirical. This is not a recommended graphical form.)\nThese are some of my favorite examples, but of course, there are also bad charts in the scientific literature (Broman 2018). The goal of this module is to ensure that as you work on research, you will create effective graphics that are accessible and well-designed."
-  },
-  {
-    "objectID": "Graphics/2023-REU.html#example-1-pie-chart-poll-results",
-    "href": "Graphics/2023-REU.html#example-1-pie-chart-poll-results",
-    "title": "Creating Good Graphics",
-    "section": "",
-    "text": "See if you can spot the problem with this one, published in the March 16, 2021 Scottsbluff, NE Star Herald (wtfViz 2021).\n\n\n\n\n\nFigure 1: Scottsbluff Star Herald Reader poll.\n\n\n\n\n\nDiscuss:\n\nWhat is wrong with this chart?\nDo you think it might be misleading? If so, how?\nDo you think the mistakes were intentional?"
-  },
-  {
-    "objectID": "Graphics/2023-REU.html#example-2-high-support",
-    "href": "Graphics/2023-REU.html#example-2-high-support",
-    "title": "Creating Good Graphics",
-    "section": "",
-    "text": "While I didn’t intend this section to have a theme, here’s another chart on a similar topic from CBS News (wtfViz 2022).\n\n\n\nFigure 2: High support.\n\n\nDiscuss:\n\nWhat is wrong with this chart?\nWhat would you change to more accurately represent the data?\nDo you think the mistakes were intentional?"
-  },
-  {
-    "objectID": "Graphics/2023-REU.html#example-3-gas-prices",
-    "href": "Graphics/2023-REU.html#example-3-gas-prices",
-    "title": "Creating Good Graphics",
-    "section": "",
-    "text": "Pie charts aren’t the only chart type that commonly are presented wrong. Here’s a bar chart that generated a lot of conversation online, from Express Web Desk (2018).\n\n\n\nFigure 3: Gas and Diesel price changes in India (2004 - 2018).\n\n\nDiscuss:\n\nWhat is wrong with this?\nWhat design choices contribute to the problems?\nDo you think this was intentionally designed to be misleading? Why or why not?"
-  },
-  {
-    "objectID": "Graphics/2023-REU.html#example-4-information-overload",
-    "href": "Graphics/2023-REU.html#example-4-information-overload",
-    "title": "Creating Good Graphics",
-    "section": "",
-    "text": "Not all charts are intentionally designed to be misleading. Sometimes, the desire to show all of the data goes awry. Here is an attempt to show 6 variables using three location variables, color, column length, and column width (Pies 2013). The original source doesn’t specify what variables are plotted, so analyze this based on its’ form, rather than the data it shows.\n\nDiscuss:\n\nWhat problems do you have reading this chart?\nCan you compare the quantities of all 6 variables shown? Why or why not?\n\n(Yes, the blog this chart is taken from is satirical. This is not a recommended graphical form.)\nThese are some of my favorite examples, but of course, there are also bad charts in the scientific literature (Broman 2018). The goal of this module is to ensure that as you work on research, you will create effective graphics that are accessible and well-designed."
-  },
-  {
-    "objectID": "Graphics/2023-REU.html#why-graphics-matter",
-    "href": "Graphics/2023-REU.html#why-graphics-matter",
-    "title": "Creating Good Graphics",
-    "section": "Why Graphics Matter",
-    "text": "Why Graphics Matter\nGraphics are a form of external cognition that allow us to think about the data rather than the chart.\nThat is, graphics are a tool to make it easier for us to think about what the data means.\nGood graphics take advantage of how the brain works, leveraging\n\npreattentive processing\nperceptual grouping\nawareness of visual limitations\n\nGood graphics also depend on the data: the chart type should be chosen based on the types of variables you want to display, the amount of data you have, and the results you want to highlight.\n\nExample: Hertzsprung Russell Diagram\nOur first example of a good chart is the Hertzsprung-Russell Diagram (Wikipedia contributors 2023a).\n\n\n\n\n\nThe Hertzsprung Russell diagram. Discovered independently by Ejnar Hertzsprung (1873–1967) and Henry Norris Russell (1877–1957). The diagram plots the color index of the star against the brightness (absolute magnitude) of the star. As a result, it is possible to discern that these two variables are related and change together over a star’s life cycle: a hypothesis that only came to be because of this chart.\n\n\n\n\nJohn Tukey, a famous statistician often considered the father of statistical graphics, wrote in Exploratory Data Analysis (1977):\n\nThe greatest value of a picture is when it forces us to notice what we never expected to see.\n\nThis chart is an excellent example of the value that good graphics create in research: they can help us understand our data in a new way, leading to innovations and new research directions.\nDiscuss:\n\nWhat variables are mapped to the following chart dimensions?\n\nX location\nY location\ncolor\n\nWhat other information is present on the chart that is not specifically a data value?\nWhat does this chart do well?\nWhat design features “work”?\nWhat don’t you like?\n\nI’ve used data from the HYG Database to generate this chart. Only stars within 500 AU are shown."
-  },
-  {
-    "objectID": "Graphics/2023-REU.html#perceptual-principles",
-    "href": "Graphics/2023-REU.html#perceptual-principles",
-    "title": "Creating Good Graphics",
-    "section": "Perceptual Principles",
-    "text": "Perceptual Principles\n\nPreattentive Perception\n\nOccurs automatically (no effort)\nColor, shape, angle\nCombinations of preattentive features require attention\n\nDouble-encoding (using multiple features for the same variable) is ok\n\n\n\n\n\n\n\n\n\n(a) Shape\n\n\n\n\n\n\n\n(b) Color\n\n\n\n\nFigure 4: Two scatterplots with one point that is different. Can you easily spot the different point?\n\n\n\n\n\n\n\n\n\n(a) Shape and Color (dual encoded)\n\n\n\n\n\n\n\n(b) Shape and Color (different variables)\n\n\n\n\nFigure 5: Two scatterplots. Can you easily spot the different point(s)?\n\n\n\n\nPerceptual Grouping\nPerception is interesting, because when faced with ambiguous images, we can learn something about how our brains work.\n\n\n\n\n\n\nFigure 6: Is this a rabbit or a duck?\n\n\n\n\n \n\n\n\n\n\nFigure 7: What do you see in this image?\n\n\n\n\n\nIn Figure 6, the image is ambiguous, and depending on what orientation we use, the figure can be either a rabbit or a duck. That is, the same image can be interpreted in two different ways, depending on the contextual information we have.\nHow do you describe the components of Figure 7? Something like “Three circles, a black triangle outline, and a white triangle over top?” The components of Figure 7 are 3 pac-man shapes and 3 angles - that’s what’s actually there. The appearance of triangles and depth information is a construction that occurs within the brain.\nOur brains use past experience to simplify the visual input from the world. It’s much easier to describe Figure 7 if you see triangles and circles rather than angles and pac-men shapes.\nThe perceptual rules that describe how we make sense of the world are the Gestalt laws, but the general principle is that the whole is more than the sum of the parts - as in Figure 7, the brain constructs meaning from individual pieces that, when combined, produce greater meaning - for example, a white triangle, a black triangle outline, and 3 circles.\n\nYou can read about the gestalt rules here (Wikipedia contributors 2023b), but they are also demonstrated in the figure above.\nIn graphics, we can leverage the gestalt principles of grouping to create order and meaning. If we color points by another variable, we are creating groups of similar points which assist with the perception of groups instead of individual observations. If we add a trend line, we create the perception that the points are moving “with” the line (in most cases), or occasionally, that the line is dividing up two groups of points. Depending on what features of the data you wish to emphasize, you might choose different aesthetics mappings, facet variables, and factor orders.\n\n\n\n\n\n\nSuppose I want to emphasize the change in the murder rate between 1980 and 2010.\nI could use a bar chart (showing only the first 4 states alphabetically for space), a line chart (showing one line per state), or a box plot (showing variability over time).\n\nRPython\n\n\n\nfbiwide &lt;- read.csv(\"https://github.com/srvanderplas/Stat151/raw/main/data/fbiwide.csv\")\nlibrary(dplyr)\nlibrary(ggplot2)\n\nfbiwide %&gt;%\n  filter(Year %in% c(1980, 2010)) %&gt;%\n  filter(State %in% c(\"Alabama\", \"Alaska\", \"Arizona\", \"Arkansas\")) %&gt;%\n  ggplot(aes(x = State, y = Murder/Population*100000, fill = factor(Year))) +\n  geom_col(position = \"dodge\") +\n  coord_flip() +\n  ylab(\"Murders per 100,000 residents\")\n\nfbiwide %&gt;%\n  filter(Year %in% c(1980, 2010)) %&gt;%\n  ggplot(aes(x = Year, y = Murder/Population*100000, group = State)) +\n  geom_line() +\n  ylab(\"Murders per 100,000 residents\")\n\nfbiwide %&gt;%\n  filter(Year %in% c(1980, 2010)) %&gt;%\n  ggplot(aes(x = factor(Year), y = Murder/Population*100000)) +\n  geom_boxplot() +\n  ylab(\"Murders per 100,000 residents\")\n\n\n\n\n\n\nBar chart, showing 4 states\n\n\n\n\n\n\n\n\n\nLine chart, with one state per line\n\n\n\n\n\n\n\n\n\nBox plot by year\n\n\n\n\n\n\nThree versions of the same data that emphasize different aspects of the dataset.\n\n\n\n\n\n\n\nimport pandas as pd\nfrom plotnine import *\n\nfbiwide = r.fbiwide\nfbiwide = fbiwide.assign(YearFactor = pd.Categorical(fbiwide.Year))\nfbiwide = fbiwide.assign(Murder100k = fbiwide.Murder/fbiwide.Population * 100000)\n\nyr1980_2010 = fbiwide[fbiwide.Year.isin([1980,2010])]\nyr1980_2010 = yr1980_2010.assign(YearFactor = pd.Categorical(yr1980_2010.Year))\nsubdata = yr1980_2010[yr1980_2010.State.isin([\"Alabama\", \"Alaska\", \"Arizona\", \"Arkansas\"])]\n\n(\nggplot(subdata, aes(x = \"State\", y = \"Murder100k\", fill = \"YearFactor\")) +\n  geom_col(stat='identity', position = \"dodge\") +\n  coord_flip() +\n  ylab(\"Murders per 100,000 residents\")\n)\n(\nggplot(yr1980_2010, aes(x = \"Year\", y = \"Murder100k\", group = \"State\")) +\n  geom_line() +\n  ylab(\"Murders per 100,000 residents\")\n)\n(\nggplot(yr1980_2010, aes(x = \"YearFactor\", y = \"Murder100k\")) +\n  geom_boxplot() +\n  ylab(\"Murders per 100,000 residents\")\n)\n\n\n\n&lt;ggplot: (8753078442274)&gt;\n\n\n\n\n\n\n\nBar chart, showing 4 states\n\n\n\n\n\n\n&lt;ggplot: (8753073331429)&gt;\n\n\n\n\n\n\n\nLine chart, with one state per line\n\n\n\n\n\n\n&lt;ggplot: (8753073275218)&gt;\n\n\n\n\n\n\n\nBox plot by year\n\n\n\n\n\n\nThree versions of the same data that emphasize different aspects of the dataset.\n\n\n\n\n\n\n\n\n\n\nWhich one best demonstrates that in every state and region, the murder rate decreased?"
-  },
-  {
-    "objectID": "Graphics/2023-REU.html#perceptual-and-visual-limitations",
-    "href": "Graphics/2023-REU.html#perceptual-and-visual-limitations",
-    "title": "Creating Good Graphics",
-    "section": "Perceptual and Visual Limitations",
-    "text": "Perceptual and Visual Limitations\nOur perceptual system is not infallible, and some people have additional challenges to work with.\n\nColor\nAbout 10% of the XY population and 0.2% of the XX population has some form of colorblindness or color deficiency.\nHere are some basic tips for choosing color schemes for your charts.\n\nDo not use rainbow color gradient schemes\n\nbecause of the unequal perception of different wavelengths, these schemes are misleading - the color distance does not match the perceptual distance.\n\nAvoid any scheme that uses green-yellow-red signaling if you have a target audience that may include colorblind people.\nTo “colorblind-proof” a graphic, you can use a couple of strategies:\n\ndouble encoding - where you use color, use another aesthetic (line type, shape) as well to help your colorblind readers out\nIf you can print your chart out in black and white and still read it, it will be safe for colorblind users. This is the only foolproof way to do it!\nIf you are using a color gradient, use a monochromatic color scheme where possible. This is perceived as light -&gt; dark by colorblind people, so it will be correctly perceived no matter what color you use.\nIf you have a bidirectional scale (e.g. showing positive and negative values), the safest scheme to use is purple - white - orange. In any color scale that is multi-hue, it is important to transition through white, instead of from one color to another directly.\n\nBe conscious of what certain colors “mean”\n\nLeveraging common associations can make it easier to read a color scale and remember what it stands for (e.g. blue for cold, orange/red for hot is a natural scale, red = Republican and blue = Democrat in the US, white -&gt; blue gradients for showing rainfall totals)\nSome colors can can provoke emotional responses that may not be desirable.1\nIt is also important to be conscious of the social baggage that certain color schemes may have - the pink/blue color scheme often used to denote gender can be unnecessarily polarizing, and it may be easier to use a colder color (blue or purple) for men and a warmer color (yellow, orange, lighter green) for women2.\n\n\n\n\nWorking Memory\nWe can hold about 7 items in “working memory” and maintain these by rehearsing the content. As a result, using a legend with more than 7 items will create additional cognitive load on those viewing the visualizations. Wherever possible, keep cognitive limitations in mind\n\n\nAlt Text and Accessibility\nSome individuals may have limited vision or visual processing ability. To make your charts accessible, you should always provide alt-text for your graphics.\nIt can also help to use larger text size and/or fonts that are easier to read for individuals with e.g. dyslexia (Zorzi et al. 2012). You can customize your charts to make these changes, though instructions will vary based on which plotting system you are using."
-  },
-  {
-    "objectID": "Graphics/2023-REU.html#footnotes",
-    "href": "Graphics/2023-REU.html#footnotes",
-    "title": "Creating Good Graphics",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nWhen the COVID-19 outbreak started, many maps were using white-to-red gradients to show case counts and/or deaths. The emotional association between red and blood, danger, and death may have caused people to become more frightened than what was reasonable given the available information.↩︎\nLisa Charlotte Rost. What to consider when choosing colors for data visualization.↩︎"
   },
   {
     "objectID": "Extension/2022-Extension-REU-slides.html#what-is-statistics",
@@ -378,25 +336,207 @@
     "text": "Footnotes\n\n\nA more thorough explanation of this experiment is available here - the tea tasting experiment is one of the pillars of early statistics and randomization-based hypothesis testing.↩︎"
   },
   {
-    "objectID": "Forensics/random-match-prob.html",
-    "href": "Forensics/random-match-prob.html",
-    "title": "Hands-on (Shoes-off) Probability",
+    "objectID": "Graphics/2023-REU-slides.html#ex-1---pie-chart-poll-results",
+    "href": "Graphics/2023-REU-slides.html#ex-1---pie-chart-poll-results",
+    "title": "Creating Good Graphics",
+    "section": "Ex 1 - Pie Chart Poll Results",
+    "text": "Ex 1 - Pie Chart Poll Results\n\n\n\n\n\n\nFigure 1: Scottsbluff Star Herald Reader poll.\n\n\n\n\n\nDiscuss:\n\nWhat is wrong with this chart?\nDo you think it might be misleading? If so, how?\nDo you think the mistakes were intentional?"
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#ex-2---high-support",
+    "href": "Graphics/2023-REU-slides.html#ex-2---high-support",
+    "title": "Creating Good Graphics",
+    "section": "Ex 2 - High Support",
+    "text": "Ex 2 - High Support\n\n\n\n\n\n\nFigure 2: High support.\n\n\n\nDiscuss:\n\nWhat is wrong with this chart?\nWhat would you change to more accurately represent the data?\nDo you think the mistakes were intentional?"
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#ex-3---gas-prices",
+    "href": "Graphics/2023-REU-slides.html#ex-3---gas-prices",
+    "title": "Creating Good Graphics",
+    "section": "Ex 3 - Gas Prices",
+    "text": "Ex 3 - Gas Prices\n\n\n\n\n\n\n\nFigure 3: Gas and Diesel price changes in India (2004 - 2018).\n\n\n\nDiscuss:\n\nWhat is wrong with this?\nWhat design choices contribute to the problems?\nDo you think this was intentionally designed to be misleading? Why or why not?"
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#ex-4---information-overload",
+    "href": "Graphics/2023-REU-slides.html#ex-4---information-overload",
+    "title": "Creating Good Graphics",
+    "section": "Ex 4 - Information Overload",
+    "text": "Ex 4 - Information Overload\n\n\n\n\n\nFigure 4: This is not a recommended graph type.\n\n\n\nDiscuss:\n\nWhat problems do you have reading this chart?\nCan you compare the quantities of all 6 variables shown? Why or why not?\n\n\n\n\nNot all charts are intentionally designed to be misleading. Sometimes, the desire to show all of the data goes awry. Here is an attempt to show 6 variables using three location variables, color, column length, and column width (Pies 2013). The original source doesn’t specify what variables are plotted, so analyze this based on its’ form, rather than the data it shows."
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#why-graphics-matter",
+    "href": "Graphics/2023-REU-slides.html#why-graphics-matter",
+    "title": "Creating Good Graphics",
+    "section": "Why Graphics Matter",
+    "text": "Why Graphics Matter\nGraphics are a form of external cognition that allow us to think about the data rather than the chart.\nThat is, graphics are a tool to make it easier for us to think about what the data means."
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#why-graphics-matter-1",
+    "href": "Graphics/2023-REU-slides.html#why-graphics-matter-1",
+    "title": "Creating Good Graphics",
+    "section": "Why Graphics Matter",
+    "text": "Why Graphics Matter\nGood graphics take advantage of how the brain works, leveraging\n\npreattentive processing\nperceptual grouping\nawareness of visual limitations\n\nGood graphics also depend on the data: the chart type should be chosen based on the types of variables you want to display, the amount of data you have, and the results you want to highlight."
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#hertzsprung-russell-diagram",
+    "href": "Graphics/2023-REU-slides.html#hertzsprung-russell-diagram",
+    "title": "Creating Good Graphics",
+    "section": "Hertzsprung Russell Diagram",
+    "text": "Hertzsprung Russell Diagram\n\n\nThe Hertzsprung Russell diagram."
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#why-graphics-matter-2",
+    "href": "Graphics/2023-REU-slides.html#why-graphics-matter-2",
+    "title": "Creating Good Graphics",
+    "section": "Why Graphics Matter",
+    "text": "Why Graphics Matter\nJohn Tukey, a famous statistician often considered the father of statistical graphics, wrote in Exploratory Data Analysis (1977):\n\nThe greatest value of a picture is when it forces us to notice what we never expected to see."
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#discuss",
+    "href": "Graphics/2023-REU-slides.html#discuss",
+    "title": "Creating Good Graphics",
+    "section": "Discuss",
+    "text": "Discuss\n\n\n\n\n\n\n\nThe Hertzsprung Russell diagram.\n\n\n\n\n\n\nWhat variables are shown in each dimension?\n\nX location\nY location\ncolor\n\n\n\n\n\nWhat non-data information is on the chart?\nWhat does this chart do well?\nWhat design features “work”?\nWhat don’t you like?"
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#preattentive-perception",
+    "href": "Graphics/2023-REU-slides.html#preattentive-perception",
+    "title": "Creating Good Graphics",
+    "section": "Preattentive Perception",
+    "text": "Preattentive Perception\n\nOccurs automatically (no effort)\nColor, shape, angle\nCombinations of preattentive features require attention\n\nDouble-encoding (using multiple features for the same variable) is ok"
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#preattentive-perception-1",
+    "href": "Graphics/2023-REU-slides.html#preattentive-perception-1",
+    "title": "Creating Good Graphics",
+    "section": "Preattentive Perception",
+    "text": "Preattentive Perception\n\n\n\n\n\n\n\n(a) Shape\n\n\n\n\n\n\n\n(b) Color\n\n\n\n\nFigure 5: Two scatterplots with one point that is different. Can you easily spot the different point?"
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#preattentive-perception-2",
+    "href": "Graphics/2023-REU-slides.html#preattentive-perception-2",
+    "title": "Creating Good Graphics",
+    "section": "Preattentive Perception",
+    "text": "Preattentive Perception\n\n\n\n\n\n\n\n(a) Shape and Color (dual encoded)\n\n\n\n\n\n\n\n(b) Shape and Color (different variables)\n\n\n\n\nFigure 6: Two scatterplots. Can you easily spot the different point(s)?"
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#perceptual-grouping",
+    "href": "Graphics/2023-REU-slides.html#perceptual-grouping",
+    "title": "Creating Good Graphics",
+    "section": "Perceptual Grouping",
+    "text": "Perceptual Grouping\n\n\n\n\n\n\n\nFigure 7: Is this a rabbit or a duck?\n\n\n\n\n \n\n\n\n\n\nFigure 8: What do you see in this image?\n\n\n\n\n\n\nIn Figure 7, the image is ambiguous, and depending on what orientation we use, the figure can be either a rabbit or a duck. That is, the same image can be interpreted in two different ways, depending on the contextual information we have.\nHow do you describe the components of Figure 8? Something like “Three circles, a black triangle outline, and a white triangle over top?” The components of Figure 8 are 3 pac-man shapes and 3 angles - that’s what’s actually there. The appearance of triangles and depth information is a construction that occurs within the brain.\nOur brains use past experience to simplify the visual input from the world. It’s much easier to describe Figure 8 if you see triangles and circles rather than angles and pac-men shapes.\nThe perceptual rules that describe how we make sense of the world are the Gestalt laws, but the general principle is that the whole is more than the sum of the parts - as in Figure 8, the brain constructs meaning from individual pieces that, when combined, produce greater meaning - for example, a white triangle, a black triangle outline, and 3 circles."
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#perceptual-grouping-1",
+    "href": "Graphics/2023-REU-slides.html#perceptual-grouping-1",
+    "title": "Creating Good Graphics",
+    "section": "Perceptual Grouping",
+    "text": "Perceptual Grouping\n\nYou can read about the gestalt rules here (Wikipedia contributors 2023), but they are also demonstrated in the figure above.\n\nIn graphics, we can leverage the gestalt principles of grouping to create order and meaning. If we color points by another variable, we are creating groups of similar points which assist with the perception of groups instead of individual observations. If we add a trend line, we create the perception that the points are moving “with” the line (in most cases), or occasionally, that the line is dividing up two groups of points. Depending on what features of the data you wish to emphasize, you might choose different aesthetics mappings, facet variables, and factor orders."
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#example-grouping-in-charts",
+    "href": "Graphics/2023-REU-slides.html#example-grouping-in-charts",
+    "title": "Creating Good Graphics",
+    "section": "Example: Grouping in Charts",
+    "text": "Example: Grouping in Charts\n\nSuppose I want to emphasize the change in the murder rate between 1980 and 2010.\nI could use a bar chart (showing only the first 4 states alphabetically for space), a line chart (showing one line per state), or a box plot (showing variability over time).\n\n\nWhich one best demonstrates that in every state and region, the murder rate decreased?"
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#color",
+    "href": "Graphics/2023-REU-slides.html#color",
+    "title": "Creating Good Graphics",
+    "section": "Color",
+    "text": "Color\nAbout 10% of the XY population and 0.2% of the XX population has some form of colorblindness or color deficiency.\nHere are some basic tips for choosing color schemes for your charts.\n\nDo not use rainbow color gradient schemes\n\nbecause of the unequal perception of different wavelengths, these schemes are misleading - the color distance does not match the perceptual distance.\n\nAvoid any scheme that uses green-yellow-red signaling if you have a target audience that may include colorblind people."
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#color-1",
+    "href": "Graphics/2023-REU-slides.html#color-1",
+    "title": "Creating Good Graphics",
+    "section": "Color",
+    "text": "Color\n\nTo “colorblind-proof” a graphic, you can use a couple of strategies:\n\ndouble encoding - where you use color, use another aesthetic (line type, shape) as well\nCan you print it in greyscale and read it? &lt;- Foolproof option\nUse monochromatic gradients where possible\nFor bidirectional scales, the safest scheme to use is purple - white - orange. Always transition through a light, neutral color."
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#color-2",
+    "href": "Graphics/2023-REU-slides.html#color-2",
+    "title": "Creating Good Graphics",
+    "section": "Color",
+    "text": "Color\n\nBe conscious of what certain colors “mean”\n\nLeveraging common associations can make it easier to read a color scale and remember what it stands for (e.g. blue for cold, orange/red for hot)\nBeware undesireable emotional responses to colors (red = death)\nSome schemes have social baggage (pink/blue for gender)"
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#working-memory",
+    "href": "Graphics/2023-REU-slides.html#working-memory",
+    "title": "Creating Good Graphics",
+    "section": "Working Memory",
+    "text": "Working Memory\nWe can hold about 7 items in “working memory” and maintain these by rehearsing the content.\nAs a result, using a legend with more than 7 items will create additional cognitive load on those viewing the visualizations.\nWherever possible, keep cognitive limitations in mind!"
+  },
+  {
+    "objectID": "Graphics/2023-REU-slides.html#alt-text-and-accessibility",
+    "href": "Graphics/2023-REU-slides.html#alt-text-and-accessibility",
+    "title": "Creating Good Graphics",
+    "section": "Alt Text and Accessibility",
+    "text": "Alt Text and Accessibility\nSome individuals may have limited vision or visual processing ability.\nTo make your charts accessible, you should always provide alt-text for your graphics.\nIt can also help to use larger text size and/or fonts that are easier to read for individuals with e.g. dyslexia (Zorzi et al. 2012).\nYou can customize your charts to make these changes, though instructions will vary based on which plotting system you are using."
+  },
+  {
+    "objectID": "Graphics/2023-REU.html",
+    "href": "Graphics/2023-REU.html",
+    "title": "Creating Good Graphics",
     "section": "",
-    "text": "Suppose you are a forensic examiner.\n\nYou’ve been given a crime-scene print as well as a suspect’s shoe, which you have used to make a print comparable to the one found at the crime scene. The images are shown in Figure 1.\n\n\n\n\n\n\n\n(a) Print of the suspect’s shoe\n\n\n\n\n\n\n\n(b) Crime Scene Print\n\n\n\n\nFigure 1: Evidence specific to the case in question\n\n\nCompare the features of the lab-made print and the crime-scene print.\nDo they look similar?\nAre there any differences?\n\nYou’ve determined that the two prints form a class characteristic match - they have sufficiently similar features that the suspect might have left the print at the crime scene, but it could also have been any other person wearing the same model of shoe. You are writing up your report, and you expect you will have to testify in court about whether the suspect did or did not commit the crime. To do this, you need some sort of way to determine how likely it is that a random person off the street is to have the same shoe as the one that left the print at the scene.\n\nConsider for a moment what you would say if the print and the suspect’s shoe had been of a different model, like the Converse Chuck Taylor All-Star shown in Figure 2.\n\n\n\nFigure 2: Converse Chuck Taylor sole\n\n\nThese shoes were first introduced in the 1960s and have had a relatively consistent design for 60 years. In addition, many different models of Converse shoes (and several knock-off brands) feature a similar sole pattern, which means it is not possible to determine what model of Converse made a specific print.\nThen, think about what you would say if the print and the suspect’s shoe had been from a shoe with a relatively uncommon pattern, such as the shoe sole shown in Figure 3.\n\n\n\nFigure 3: El Naturalista’s Nido boot sole. The site describes the sole as follows: “The storks nests, to which the same couples return year after year, somewhere to come back to, a stable home and the place where life begins after each laying, are the perfect inspiration for those who seek to return home every day have[sic] enjoyed a unique design and comfort.”\n\n\nIf your crime scene print had been from a Converse shoe, does that mean the suspect is more or less likely to be guilty than if the crime scene print had been from a El Naturalista Nido boot like the sole in Figure 3?\n\nDaydreaming over, you start back to your report writing. How do you characterize the types of shoes people wear in the population? What makes a shoe common or uncommon?"
+    "text": "Let’s start out by looking at some examples of less-than-effective charts.\n\n\nSee if you can spot the problem with this one, published in the March 16, 2021 Scottsbluff, NE Star Herald (wtfViz 2021).\n\n\n\n\n\nFigure 1: Scottsbluff Star Herald Reader poll.\n\n\n\n\n\nDiscuss:\n\nWhat is wrong with this chart?\nDo you think it might be misleading? If so, how?\nDo you think the mistakes were intentional?\n\n\n\n\n\n\nWhile I didn’t intend this section to have a theme, here’s another chart on a similar topic from CBS News (wtfViz 2022).\n\n\n\nFigure 2: High support.\n\n\nDiscuss:\n\nWhat is wrong with this chart?\nWhat would you change to more accurately represent the data?\nDo you think the mistakes were intentional?\n\n\n\n\nPie charts aren’t the only chart type that commonly are presented wrong. Here’s a bar chart that generated a lot of conversation online, from Express Web Desk (2018).\n\n\n\nFigure 3: Gas and Diesel price changes in India (2004 - 2018).\n\n\nDiscuss:\n\nWhat is wrong with this?\nWhat design choices contribute to the problems?\nDo you think this was intentionally designed to be misleading? Why or why not?\n\n\n\n\nNot all charts are intentionally designed to be misleading. Sometimes, the desire to show all of the data goes awry. Here is an attempt to show 6 variables using three location variables, color, column length, and column width (Pies 2013). The original source doesn’t specify what variables are plotted, so analyze this based on its’ form, rather than the data it shows.\n\nDiscuss:\n\nWhat problems do you have reading this chart?\nCan you compare the quantities of all 6 variables shown? Why or why not?\n\n(Yes, the blog this chart is taken from is satirical. This is not a recommended graphical form.)\nThese are some of my favorite examples, but of course, there are also bad charts in the scientific literature (Broman 2018). The goal of this module is to ensure that as you work on research, you will create effective graphics that are accessible and well-designed."
   },
   {
-    "objectID": "Forensics/random-match-prob.html#materials",
-    "href": "Forensics/random-match-prob.html#materials",
-    "title": "Hands-on (Shoes-off) Probability",
-    "section": "Materials",
-    "text": "Materials\n\nCooking Spray\nChocolate Milk powder\nNote: Cocoa powder used for baking is not ideal for this project. You want something designed to stir into milk.\nWhite printer paper of a size appropriate to your participants’ feet.\n\n8.5” x 14” paper will accommodate most feet. Here is a template that you can use that includes a forensics ruler (Do not scale if you want the measurements to be accurate).\nIf you have a lot of tall men in your sample population, you may need to combine multiple sheets or use 11” x 17” paper.\n\n2 towels, puppy pads, or rolls of paper towels\nA cookie sheet large enough to hold your sheet of paper\n1-2 spoons\ntape (optional - to hang the prints up on the wall)\nA pan filled with about 1” of soapy water (optional - good if doing this indoors)"
+    "objectID": "Graphics/2023-REU.html#example-1-pie-chart-poll-results",
+    "href": "Graphics/2023-REU.html#example-1-pie-chart-poll-results",
+    "title": "Creating Good Graphics",
+    "section": "",
+    "text": "See if you can spot the problem with this one, published in the March 16, 2021 Scottsbluff, NE Star Herald (wtfViz 2021).\n\n\n\n\n\nFigure 1: Scottsbluff Star Herald Reader poll.\n\n\n\n\n\nDiscuss:\n\nWhat is wrong with this chart?\nDo you think it might be misleading? If so, how?\nDo you think the mistakes were intentional?"
   },
   {
-    "objectID": "Forensics/random-match-prob.html#directions",
-    "href": "Forensics/random-match-prob.html#directions",
-    "title": "Hands-on (Shoes-off) Probability",
-    "section": "Directions",
-    "text": "Directions\nPDF for classroom use\n\nTake off one shoe, hold it sole up, and (lightly) apply cooking spray to the sole.\nSet the shoe on the towel or pad and put it back on. Step/hop on the shoe once or twice to remove excess oil.\nStep (with your oiled shoe) onto the first sheet of paper, rolling heel-to-toe.\nStep (with your oiled shoe) onto the second sheet of paper, rolling heel-to-toe.\nStep into the pan of soapy water with the shoe that you oiled, then step onto the towel to dry your shoe off.\nLightly sprinkle about 1/4 tsp of chocolate milk powder onto each sheet of paper. Shake the sheet of paper to spread the powder around so that it adheres to the oil.\nUse the feature guide to identify different geometric features on your shoe print.\nCompare with other shoe prints - do any have similar features in similar locations?\nNote: This step may only work in groups of about 30 or more.\n\nThe Random Match Probability of a shoe is the number of similar prints divided by the total number of prints. \\[\\hat P_\\text{Random Match} = \\frac{\\# \\text{ similar prints}}{\\text{Total # prints}}\\]\nIf our sample is large enough and representative of the larger population, then our estimated random match probability might be close enough to the hypothetical random match probability in the population"
+    "objectID": "Graphics/2023-REU.html#example-2-high-support",
+    "href": "Graphics/2023-REU.html#example-2-high-support",
+    "title": "Creating Good Graphics",
+    "section": "",
+    "text": "While I didn’t intend this section to have a theme, here’s another chart on a similar topic from CBS News (wtfViz 2022).\n\n\n\nFigure 2: High support.\n\n\nDiscuss:\n\nWhat is wrong with this chart?\nWhat would you change to more accurately represent the data?\nDo you think the mistakes were intentional?"
+  },
+  {
+    "objectID": "Graphics/2023-REU.html#example-3-gas-prices",
+    "href": "Graphics/2023-REU.html#example-3-gas-prices",
+    "title": "Creating Good Graphics",
+    "section": "",
+    "text": "Pie charts aren’t the only chart type that commonly are presented wrong. Here’s a bar chart that generated a lot of conversation online, from Express Web Desk (2018).\n\n\n\nFigure 3: Gas and Diesel price changes in India (2004 - 2018).\n\n\nDiscuss:\n\nWhat is wrong with this?\nWhat design choices contribute to the problems?\nDo you think this was intentionally designed to be misleading? Why or why not?"
+  },
+  {
+    "objectID": "Graphics/2023-REU.html#example-4-information-overload",
+    "href": "Graphics/2023-REU.html#example-4-information-overload",
+    "title": "Creating Good Graphics",
+    "section": "",
+    "text": "Not all charts are intentionally designed to be misleading. Sometimes, the desire to show all of the data goes awry. Here is an attempt to show 6 variables using three location variables, color, column length, and column width (Pies 2013). The original source doesn’t specify what variables are plotted, so analyze this based on its’ form, rather than the data it shows.\n\nDiscuss:\n\nWhat problems do you have reading this chart?\nCan you compare the quantities of all 6 variables shown? Why or why not?\n\n(Yes, the blog this chart is taken from is satirical. This is not a recommended graphical form.)\nThese are some of my favorite examples, but of course, there are also bad charts in the scientific literature (Broman 2018). The goal of this module is to ensure that as you work on research, you will create effective graphics that are accessible and well-designed."
+  },
+  {
+    "objectID": "Graphics/2023-REU.html#why-graphics-matter",
+    "href": "Graphics/2023-REU.html#why-graphics-matter",
+    "title": "Creating Good Graphics",
+    "section": "Why Graphics Matter",
+    "text": "Why Graphics Matter\nGraphics are a form of external cognition that allow us to think about the data rather than the chart.\nThat is, graphics are a tool to make it easier for us to think about what the data means.\nGood graphics take advantage of how the brain works, leveraging\n\npreattentive processing\nperceptual grouping\nawareness of visual limitations\n\nGood graphics also depend on the data: the chart type should be chosen based on the types of variables you want to display, the amount of data you have, and the results you want to highlight.\n\nExample: Hertzsprung Russell Diagram\nOur first example of a good chart is the Hertzsprung-Russell Diagram (Wikipedia contributors 2023a).\n\n\n\n\n\nThe Hertzsprung Russell diagram. Discovered independently by Ejnar Hertzsprung (1873–1967) and Henry Norris Russell (1877–1957). The diagram plots the color index of the star against the brightness (absolute magnitude) of the star. As a result, it is possible to discern that these two variables are related and change together over a star’s life cycle: a hypothesis that only came to be because of this chart.\n\n\n\n\nJohn Tukey, a famous statistician often considered the father of statistical graphics, wrote in Exploratory Data Analysis (1977):\n\nThe greatest value of a picture is when it forces us to notice what we never expected to see.\n\nThis chart is an excellent example of the value that good graphics create in research: they can help us understand our data in a new way, leading to innovations and new research directions.\nDiscuss:\n\nWhat variables are mapped to the following chart dimensions?\n\nX location\nY location\ncolor\n\nWhat other information is present on the chart that is not specifically a data value?\nWhat does this chart do well?\nWhat design features “work”?\nWhat don’t you like?\n\nI’ve used data from the HYG Database to generate this chart. Only stars within 500 AU are shown."
+  },
+  {
+    "objectID": "Graphics/2023-REU.html#perceptual-principles",
+    "href": "Graphics/2023-REU.html#perceptual-principles",
+    "title": "Creating Good Graphics",
+    "section": "Perceptual Principles",
+    "text": "Perceptual Principles\n\nPreattentive Perception\n\nOccurs automatically (no effort)\nColor, shape, angle\nCombinations of preattentive features require attention\n\nDouble-encoding (using multiple features for the same variable) is ok\n\n\n\n\n\n\n\n\n\n(a) Shape\n\n\n\n\n\n\n\n(b) Color\n\n\n\n\nFigure 4: Two scatterplots with one point that is different. Can you easily spot the different point?\n\n\n\n\n\n\n\n\n\n(a) Shape and Color (dual encoded)\n\n\n\n\n\n\n\n(b) Shape and Color (different variables)\n\n\n\n\nFigure 5: Two scatterplots. Can you easily spot the different point(s)?\n\n\n\n\nPerceptual Grouping\nPerception is interesting, because when faced with ambiguous images, we can learn something about how our brains work.\n\n\n\n\n\n\nFigure 6: Is this a rabbit or a duck?\n\n\n\n\n \n\n\n\n\n\nFigure 7: What do you see in this image?\n\n\n\n\n\nIn Figure 6, the image is ambiguous, and depending on what orientation we use, the figure can be either a rabbit or a duck. That is, the same image can be interpreted in two different ways, depending on the contextual information we have.\nHow do you describe the components of Figure 7? Something like “Three circles, a black triangle outline, and a white triangle over top?” The components of Figure 7 are 3 pac-man shapes and 3 angles - that’s what’s actually there. The appearance of triangles and depth information is a construction that occurs within the brain.\nOur brains use past experience to simplify the visual input from the world. It’s much easier to describe Figure 7 if you see triangles and circles rather than angles and pac-men shapes.\nThe perceptual rules that describe how we make sense of the world are the Gestalt laws, but the general principle is that the whole is more than the sum of the parts - as in Figure 7, the brain constructs meaning from individual pieces that, when combined, produce greater meaning - for example, a white triangle, a black triangle outline, and 3 circles.\n\nYou can read about the gestalt rules here (Wikipedia contributors 2023b), but they are also demonstrated in the figure above.\nIn graphics, we can leverage the gestalt principles of grouping to create order and meaning. If we color points by another variable, we are creating groups of similar points which assist with the perception of groups instead of individual observations. If we add a trend line, we create the perception that the points are moving “with” the line (in most cases), or occasionally, that the line is dividing up two groups of points. Depending on what features of the data you wish to emphasize, you might choose different aesthetics mappings, facet variables, and factor orders.\n\n\n\n\n\n\nSuppose I want to emphasize the change in the murder rate between 1980 and 2010.\nI could use a bar chart (showing only the first 4 states alphabetically for space), a line chart (showing one line per state), or a box plot (showing variability over time).\n\nRPython\n\n\n\nfbiwide &lt;- read.csv(\"https://github.com/srvanderplas/Stat151/raw/main/data/fbiwide.csv\")\nlibrary(dplyr)\nlibrary(ggplot2)\n\nfbiwide %&gt;%\n  filter(Year %in% c(1980, 2010)) %&gt;%\n  filter(State %in% c(\"Alabama\", \"Alaska\", \"Arizona\", \"Arkansas\")) %&gt;%\n  ggplot(aes(x = State, y = Murder/Population*100000, fill = factor(Year))) +\n  geom_col(position = \"dodge\") +\n  coord_flip() +\n  ylab(\"Murders per 100,000 residents\")\n\nfbiwide %&gt;%\n  filter(Year %in% c(1980, 2010)) %&gt;%\n  ggplot(aes(x = Year, y = Murder/Population*100000, group = State)) +\n  geom_line() +\n  ylab(\"Murders per 100,000 residents\")\n\nfbiwide %&gt;%\n  filter(Year %in% c(1980, 2010)) %&gt;%\n  ggplot(aes(x = factor(Year), y = Murder/Population*100000)) +\n  geom_boxplot() +\n  ylab(\"Murders per 100,000 residents\")\n\n\n\n\n\n\nBar chart, showing 4 states\n\n\n\n\n\n\n\n\n\nLine chart, with one state per line\n\n\n\n\n\n\n\n\n\nBox plot by year\n\n\n\n\n\n\nThree versions of the same data that emphasize different aspects of the dataset.\n\n\n\n\n\n\n\nimport pandas as pd\nfrom plotnine import *\n\nfbiwide = r.fbiwide\nfbiwide = fbiwide.assign(YearFactor = pd.Categorical(fbiwide.Year))\nfbiwide = fbiwide.assign(Murder100k = fbiwide.Murder/fbiwide.Population * 100000)\n\nyr1980_2010 = fbiwide[fbiwide.Year.isin([1980,2010])]\nyr1980_2010 = yr1980_2010.assign(YearFactor = pd.Categorical(yr1980_2010.Year))\nsubdata = yr1980_2010[yr1980_2010.State.isin([\"Alabama\", \"Alaska\", \"Arizona\", \"Arkansas\"])]\n\n(\nggplot(subdata, aes(x = \"State\", y = \"Murder100k\", fill = \"YearFactor\")) +\n  geom_col(stat='identity', position = \"dodge\") +\n  coord_flip() +\n  ylab(\"Murders per 100,000 residents\")\n)\n(\nggplot(yr1980_2010, aes(x = \"Year\", y = \"Murder100k\", group = \"State\")) +\n  geom_line() +\n  ylab(\"Murders per 100,000 residents\")\n)\n(\nggplot(yr1980_2010, aes(x = \"YearFactor\", y = \"Murder100k\")) +\n  geom_boxplot() +\n  ylab(\"Murders per 100,000 residents\")\n)\n\n\n\n&lt;Figure Size: (640 x 480)&gt;\n\n\n\n\n\n\n\nBar chart, showing 4 states\n\n\n\n\n\n\n&lt;Figure Size: (640 x 480)&gt;\n\n\n\n\n\n\n\nLine chart, with one state per line\n\n\n\n\n\n\n&lt;Figure Size: (640 x 480)&gt;\n\n\n\n\n\n\n\nBox plot by year\n\n\n\n\n\n\nThree versions of the same data that emphasize different aspects of the dataset.\n\n\n\n\n\n\n\n\n\n\nWhich one best demonstrates that in every state and region, the murder rate decreased?"
+  },
+  {
+    "objectID": "Graphics/2023-REU.html#perceptual-and-visual-limitations",
+    "href": "Graphics/2023-REU.html#perceptual-and-visual-limitations",
+    "title": "Creating Good Graphics",
+    "section": "Perceptual and Visual Limitations",
+    "text": "Perceptual and Visual Limitations\nOur perceptual system is not infallible, and some people have additional challenges to work with.\n\nColor\nAbout 10% of the XY population and 0.2% of the XX population has some form of colorblindness or color deficiency.\nHere are some basic tips for choosing color schemes for your charts.\n\nDo not use rainbow color gradient schemes\n\nbecause of the unequal perception of different wavelengths, these schemes are misleading - the color distance does not match the perceptual distance.\n\nAvoid any scheme that uses green-yellow-red signaling if you have a target audience that may include colorblind people.\nTo “colorblind-proof” a graphic, you can use a couple of strategies:\n\ndouble encoding - where you use color, use another aesthetic (line type, shape) as well to help your colorblind readers out\nIf you can print your chart out in black and white and still read it, it will be safe for colorblind users. This is the only foolproof way to do it!\nIf you are using a color gradient, use a monochromatic color scheme where possible. This is perceived as light -&gt; dark by colorblind people, so it will be correctly perceived no matter what color you use.\nIf you have a bidirectional scale (e.g. showing positive and negative values), the safest scheme to use is purple - white - orange. In any color scale that is multi-hue, it is important to transition through white, instead of from one color to another directly.\n\nBe conscious of what certain colors “mean”\n\nLeveraging common associations can make it easier to read a color scale and remember what it stands for (e.g. blue for cold, orange/red for hot is a natural scale, red = Republican and blue = Democrat in the US, white -&gt; blue gradients for showing rainfall totals)\nSome colors can can provoke emotional responses that may not be desirable.1\nIt is also important to be conscious of the social baggage that certain color schemes may have - the pink/blue color scheme often used to denote gender can be unnecessarily polarizing, and it may be easier to use a colder color (blue or purple) for men and a warmer color (yellow, orange, lighter green) for women2.\n\n\n\n\nWorking Memory\nWe can hold about 7 items in “working memory” and maintain these by rehearsing the content. As a result, using a legend with more than 7 items will create additional cognitive load on those viewing the visualizations. Wherever possible, keep cognitive limitations in mind\n\n\nAlt Text and Accessibility\nSome individuals may have limited vision or visual processing ability. To make your charts accessible, you should always provide alt-text for your graphics.\nIt can also help to use larger text size and/or fonts that are easier to read for individuals with e.g. dyslexia (Zorzi et al. 2012). You can customize your charts to make these changes, though instructions will vary based on which plotting system you are using."
+  },
+  {
+    "objectID": "Graphics/2023-REU.html#footnotes",
+    "href": "Graphics/2023-REU.html#footnotes",
+    "title": "Creating Good Graphics",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWhen the COVID-19 outbreak started, many maps were using white-to-red gradients to show case counts and/or deaths. The emotional association between red and blood, danger, and death may have caused people to become more frightened than what was reasonable given the available information.↩︎\nLisa Charlotte Rost. What to consider when choosing colors for data visualization.↩︎"
   },
   {
     "objectID": "index.html",
