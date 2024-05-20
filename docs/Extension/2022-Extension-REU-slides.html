@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.340">
+  <meta name="generator" content="quarto-1.4.489">
 
   <title>Teaching Materials - A Short Overview of Statistics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -155,7 +155,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -354,27 +355,27 @@
 <h2>Statistical Tasks</h2>
 <p><strong>Description</strong>: What does the data say?</p>
 
-<img data-src="../image/histogram-sample-stats.png" style="width:40.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="../image/histogram-sample-stats.png" class="quarto-figure-center r-stretch" style="width:40.0%"></section>
 <section id="statistical-tasks-1" class="slide level2 center">
 <h2>Statistical Tasks</h2>
 <p><strong>Experimental Design</strong>: What’s the best way to collect data?</p>
 
-<img data-src="../image/wizard-list.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="../image/wizard-list.png" class="quarto-figure-center r-stretch" style="width:50.0%"></section>
 <section id="statistical-tasks-2" class="slide level2 center">
 <h2>Statistical Tasks</h2>
 <p><strong>Inference</strong>: What does the data tell us (about the population)?</p>
 
-<img data-src="../image/sample-population.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="../image/sample-population.png" class="quarto-figure-center r-stretch" style="width:50.0%"></section>
 <section id="statistical-tasks-3" class="slide level2 center">
 <h2>Statistical Tasks</h2>
 <p><strong>Prediction</strong>: What will happen next?</p>
 
-<img data-src="../image/crystal-ball-fuzzball.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="../image/crystal-ball-fuzzball.png" class="quarto-figure-center r-stretch" style="width:50.0%"></section>
 <section id="an-historical-example" class="slide level2 center middle">
 <h2>An Historical Example</h2>
 <h3 id="the-logic-of-hypothesis-testing">The Logic of Hypothesis Testing</h3>
 
-<img data-src="../image/tea-tasting-fuzzballs.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p>Can someone tell whether tea or milk is added first to a cup?</p>
+<img data-src="../image/tea-tasting-fuzzballs.png" class="quarto-figure-center r-stretch" style="width:100.0%"><p>Can someone tell whether tea or milk is added first to a cup?</p>
 <ul>
 <li><p>4 cups of tea with milk first <svg viewbox="0 0 640 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#d2b48c;" xmlns="http://www.w3.org/2000/svg"> <path d="M192 384h192c53 0 96-43 96-96h32c70.6 0 128-57.4 128-128S582.6 32 512 32H120c-13.3 0-24 10.7-24 24v232c0 53 43 96 96 96zM512 96c35.3 0 64 28.7 64 64s-28.7 64-64 64h-32V96h32zm47.7 384H48.3c-47.6 0-61-64-36-64h583.3c25 0 11.8 64-35.9 64z"></path></svg>, 4 cups of tea with tea first <svg viewbox="0 0 640 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#835C3B;" xmlns="http://www.w3.org/2000/svg"> <path d="M192 384h192c53 0 96-43 96-96h32c70.6 0 128-57.4 128-128S582.6 32 512 32H120c-13.3 0-24 10.7-24 24v232c0 53 43 96 96 96zM512 96c35.3 0 64 28.7 64 64s-28.7 64-64 64h-32V96h32zm47.7 384H48.3c-47.6 0-61-64-36-64h583.3c25 0 11.8 64-35.9 64z"></path></svg></p></li>
 <li><p>Randomize the order</p></li>
@@ -391,7 +392,7 @@
 <li><p>If we assume the taster is just guessing, we could just as easily flip 4 coins</p></li>
 </ul>
 
-<img data-src="../image/coin_flip.webp" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="../image/coin_flip.webp" class="quarto-figure-center r-stretch" style="width:50.0%"></section>
 <section id="a-lady-tasting-tea-1" class="slide level2">
 <h2>A Lady Tasting Tea</h2>
 <div class="emph cerulean">
@@ -486,14 +487,14 @@ that is, they should lead to a rejection of the null hypothesis</li>
 </ul></li>
 </ul>
 
-<img data-src="../image/p-value.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="../image/p-value.png" class="quarto-figure-center r-stretch" style="width:50.0%"></section>
 <section id="two-sided-tests" class="slide level2">
 <h2>Two Sided Tests</h2>
 <ul>
 <li>If we don’t know/care whether <span class="math inline">\(x &lt; a\)</span> or <span class="math inline">\(x &gt; a\)</span>, we use a <strong>two-sided test</strong></li>
 </ul>
 
-<img data-src="../image/two-sided-test-slide.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p>You can experiment with two-sided tests here:</p>
+<img data-src="../image/two-sided-test-slide.png" class="quarto-figure-center r-stretch" style="width:100.0%"><p>You can experiment with two-sided tests here:</p>
 <p><span class="emph"><a href="https://shiny.srvanderplas.com/APL">https://shiny.srvanderplas.com/APL/</a></span> and click on “One Continuous Variable”</p>
 </section>
 <section id="confidence-intervals" class="slide level2">
@@ -503,7 +504,7 @@ that is, they should lead to a rejection of the null hypothesis</li>
 <li><p>This is called a <strong>confidence interval</strong></p></li>
 </ul>
 
-<img data-src="../image/confidence-interval-best-est-uncertanty.svg" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="../image/confidence-interval-best-est-uncertanty.svg" class="quarto-figure-center r-stretch" style="width:50.0%"></section>
 <section id="confidence-intervals-1" class="slide level2">
 <h2>Confidence Intervals</h2>
 <ul>
@@ -716,7 +717,6 @@ Sum of squared differences of the class average and the overall average for each
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1015,10 +1015,9 @@ Sum of squared differences of the class average and the overall average for each
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1028,8 +1027,17 @@ Sum of squared differences of the class average and the overall average for each
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

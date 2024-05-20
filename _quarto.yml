@@ -34,8 +34,10 @@ website:
       collapse-level: 2
       contents: 
         - graphics.qmd
-        - text: "Creating Good Charts"
+        - text: "Creating Good Charts (2023)"
           file: Graphics/2023-REU.qmd
+        - text: "Creating Good Charts (2024)"
+          file: Graphics/2024-REU.qmd
 
 
 format:

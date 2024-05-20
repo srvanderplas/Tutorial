@@ -339,29 +339,35 @@ I could use a bar chart (showing only the first 4 states alphabetically for spac
 #| layout-nrow: 3
 #| layout-ncol: 1
 
-fbiwide <- read.csv("https://github.com/srvanderplas/Stat151/raw/main/data/fbiwide.csv")
+tmp <- tempfile(fileext = ".rda")
+download.file("https://github.com/heike/classdata/raw/main/data/fbiwide.v2.rda", destfile = tmp, mode = "wb")
+load(tmp)
+fbiwide <- fbiwide.v2
 library(dplyr)
 library(ggplot2)
 
-fbiwide %>%
-  filter(Year %in% c(1980, 2010)) %>%
-  filter(State %in% c("Alabama", "Alaska", "Arizona", "Arkansas")) %>%
-  ggplot(aes(x = State, y = Murder/Population*100000, fill = factor(Year))) +
+yearsubset <- filter(fbiwide, year %in% c(1990, 2000, 2010, 2020)) %>%
+  select(state, homicide, population, year, agency_submitting, source) %>%
+  filter(source == "SRS")
+
+yearsubset %>%
+  filter(state %in% c("Alabama", "Alaska", "Arizona", "Arkansas")) %>%
+  ggplot(aes(x = state, y = homicide/population*100000, fill = factor(year))) +
   geom_col(position = "dodge") +
   coord_flip() +
-  ylab("Murders per 100,000 residents")
+  ylab("Homicides per 100,000 residents")
 
-fbiwide %>%
-  filter(Year %in% c(1980, 2010)) %>%
-  ggplot(aes(x = Year, y = Murder/Population*100000, group = State)) +
+yearsubset %>%
+  ggplot(aes(x = year, y = homicide/population*100000, group = state)) +
   geom_line() +
-  ylab("Murders per 100,000 residents")
+  xlab("Year") + 
+  ylab("Homicides per 100,000 residents")
 
-fbiwide %>%
-  filter(Year %in% c(1980, 2010)) %>%
-  ggplot(aes(x = factor(Year), y = Murder/Population*100000)) +
+yearsubset %>%
+  ggplot(aes(x = factor(year), y = homicide/population*100000)) +
   geom_boxplot() +
-  ylab("Murders per 100,000 residents")
+  xlab("Year") + 
+  ylab("Homicides per 100,000 residents")
 
 ```
 
@@ -382,30 +388,32 @@ import pandas as pd
 from plotnine import *
 
 fbiwide = r.fbiwide
-fbiwide = fbiwide.assign(YearFactor = pd.Categorical(fbiwide.Year))
-fbiwide = fbiwide.assign(Murder100k = fbiwide.Murder/fbiwide.Population * 100000)
 
-yr1980_2010 = fbiwide[fbiwide.Year.isin([1980,2010])]
-yr1980_2010 = yr1980_2010.assign(YearFactor = pd.Categorical(yr1980_2010.Year))
-subdata = yr1980_2010[yr1980_2010.State.isin(["Alabama", "Alaska", "Arizona", "Arkansas"])]
+fbisub = fbiwide[fbiwide.source.isin(['SRS'])]
+fbisub = fbisub.assign(yearfactor = pd.Categorical(fbisub.year))
+fbisub = fbisub.assign(homicide100k = fbisub.homicide/fbisub.population * 100000)
+
+yrsub = fbisub[fbisub.year.isin([1990, 2000, 2010, 2020])]
+yrsub = yrsub.assign(yearfactor = pd.Categorical(yrsub.year))
+stateyrsub = yrsub[yrsub.state.isin(["Alabama", "Alaska", "Arizona", "Arkansas"])]
 
 (
-ggplot(subdata, aes(x = "State", y = "Murder100k", fill = "YearFactor")) +
+ggplot(stateyrsub, aes(x = "state", y = "homicide100k", fill = "yearfactor")) +
   geom_col(stat='identity', position = "dodge") +
   coord_flip() +
-  ylab("Murders per 100,000 residents")
+  ylab("Homicides per 100,000 residents")
 )
 
 (
-ggplot(yr1980_2010, aes(x = "Year", y = "Murder100k", group = "State")) +
+ggplot(yrsub, aes(x = "year", y = "homicide100k", group = "state")) +
   geom_line() +
-  ylab("Murders per 100,000 residents")
+  ylab("Homicides per 100,000 residents")
 )
 
 (
-ggplot(yr1980_2010, aes(x = "YearFactor", y = "Murder100k")) +
+ggplot(yrsub, aes(x = "yearfactor", y = "homicide100k")) +
   geom_boxplot() +
-  ylab("Murders per 100,000 residents")
+  ylab("Homicides per 100,000 residents")
 )
 
 ```
