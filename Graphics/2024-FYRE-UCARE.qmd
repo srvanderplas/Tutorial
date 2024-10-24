@@ -1,0 +1,14 @@
+---
+title: "Good Scientific Graphics"
+editor: visual
+---
+
+# Quick Start
+
+Important considerations:
+
+-   What story are you trying to tell?
+
+-   Who is your audience?
+
+-   What background is important?
