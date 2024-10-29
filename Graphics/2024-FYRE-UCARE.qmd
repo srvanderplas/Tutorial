@@ -12,3 +12,43 @@ Important considerations:
 -   Who is your audience?
 
 -   What background is important?
+
+Mechanics:
+
+-   What variables do you want to show?
+
+-   What type of variables?
+
+    -   Numerical
+
+        -   Continuous
+
+        -   Discrete-ish
+
+    -   Categorical
+
+        -   Ordered
+
+        -   Unordered
+
+    -   Text
+
+-   Are you going to summarize the variables? How?
+
+Plot Formation:
+
+-   What type of geometry will best show your comparison(s) of interest?
+
+-   Color choice:
+
+    -   Are there natural color associations with your variables? (red for hot, blue for cold, etc.)
+
+    -   Do you have a specific theme to use?
+
+    -   Are your colors colorblind friendly, or can you dual-encode the information?
+
+    -   Do you have enough contrast?
+
+-   Element sizing:
+
+    -   Fonts should be large enough to be accessible/readable (in context)
